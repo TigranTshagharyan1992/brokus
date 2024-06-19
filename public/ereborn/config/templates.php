@@ -20,12 +20,33 @@
     $home = array(
         array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
         array("title"=>"Main Img", "type"=>"image", "name"=>"ed_image"),
-        array("title"=>"Welcome Message", "type"=>"textarea", "name"=>"edl_text_1", "isRichText"=>false),
+        array("title"=>"Welcome Message", "type"=>"text", "name"=>"edl_char_1"),
         array("title"=>"Slogan", "type"=>"number", "name"=>"ed_number_1"),
+        array("title"=>"Մի փոքր մեր գործունեությունից", "type"=>"text", "name"=>"edl_char_2"),
+    );
+
+    $content = array(
+        array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+        array("title"=>"Facebook", "type"=>"text", "name"=>"ed_char_1"),
+        array("title"=>"Instagram", "type"=>"text", "name"=>"ed_char_2"),
+        array("title"=>"Linkedin", "type"=>"text", "name"=>"ed_char_3"),
+        array("title"=>"Phone Number 1", "type"=>"text", "name"=>"ed_char_4"),
+        array("title"=>"Phone Number 2", "type"=>"text", "name"=>"ed_char_5"),
+        array("title"=>"Email", "type"=>"text", "name"=>"ed_char_6"),
+        array("title"=>"ՏԱՐԻ ՇՈՒԿԱՅՈՒՄ", "type"=>"text", "name"=>"edl_char_1"),
+        array("title"=>"ՏԱՐԻ ՇՈՒԿԱՅՈՒՄ թիվ", "type"=>"text", "name"=>"edl_char_2"),
+        array("title"=>"ԳՈՐԾԸՆԿԵՐՆԵՐ", "type"=>"text", "name"=>"edl_char_1"),
+        array("title"=>"ԳՈՐԾԸՆԿԵՐՆԵՐ թիվ", "type"=>"text", "name"=>"edl_char_2"),
+        array("title"=>"ԹԻՄԻ ԱՆԴԱՄՆԵՐ", "type"=>"text", "name"=>"edl_char_3"),
+        array("title"=>"ԹԻՄԻ ԱՆԴԱՄՆԵՐ թիվ", "type"=>"text", "name"=>"edl_char_4"),
+        array("title"=>"ԿԱՏԱՐՎԱԾ ԳՈՐԾԱՐՔ", "type"=>"text", "name"=>"edl_char_5"),
+        array("title"=>"ԿԱՏԱՐՎԱԾ ԳՈՐԾԱՐՔ թիվ", "type"=>"text", "name"=>"edl_char_6"),
+        array("title"=>"Address", "type"=>"text", "name"=>"edl_char_7"),
     );
 ?>
 <?php
 	$templates = array(
         array("id"=>"Home", "title"=>"Գլխավոր էջ", "fields"=>$home, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+        array("id"=>"Content", "title"=>"Կրկնվոք Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
 	);
 ?>

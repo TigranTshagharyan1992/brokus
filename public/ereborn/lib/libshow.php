@@ -15,7 +15,7 @@
 		$tableName = getTableName($fieldPrefix);
 		
 		$multilang = isMultiLang($tableName);
-		
+		$className = $field["type"]==="file" || $field["type"]==="image" ? "input-section_del" : '';
 		if( isset($field["required"]) && $field["required"]===true )
 		{
 			$required = "required";
@@ -25,7 +25,7 @@
 			$required = "";
 		}
 		?>
-			<div class="input-sections">
+			<div class="input-sections <?php echo $className ?>">
 				<div class="flex-wrapper align-justify ">
 					<div class="title">
 						<?php
@@ -261,6 +261,12 @@
 							}
 							elseif($field["type"]==="datetime")
 							{
+								if(!$fieldValue)
+								{
+									$fieldValue = date("Y-m-d H:i:s");
+								}
+								
+								$fieldValue = substr($fieldValue, 0, 16);
 								?>
 									<input type="datetime-local" <?php echo $required ?> name="<?php echo $fieldName ?>" class="form-control" value="<?php echo str_replace(" ", "T", $fieldValue) ?>" />
 								<?php

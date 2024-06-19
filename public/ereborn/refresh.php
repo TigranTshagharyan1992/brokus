@@ -1,7 +1,7 @@
 <?php
 	date_default_timezone_set("UTC");
 	
-	session_name( sha1( date("Y")."-_-".date("m")."-_-".date("d") ) );
+	session_name("PHILIPS");
 	session_start();
 	
 	header("Expires: on, 01 Jan 1970 00:00:00 GMT");

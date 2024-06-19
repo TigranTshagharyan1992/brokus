@@ -3,7 +3,7 @@
 
 	date_default_timezone_set("Asia/Yerevan");
 
-	session_name( sha1( date("Y")."-_-".date("m")."-_-".date("d") ) );
+	session_name("PHILIPS");
 	session_start();
 
 	header("Expires: on, 01 Jan 1970 00:00:00 GMT");
@@ -12,7 +12,7 @@
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
 
-	require("../common.php");
+    require("../common.php");
 
 	require("lib/class.db.php");
 	require("lib/libapp.php");
@@ -114,6 +114,7 @@
 	<link rel="stylesheet" href="css/templatemo-style.css">
 	<link rel="stylesheet" href="config/style.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/media.css">
 
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/jquery-resizable-dom/dist/jquery-resizable.min.js"></script>
@@ -177,8 +178,14 @@
 		{
 			?>
 				<div class="tm-blue-bg tm-left-column">
+					<div class="tm-left-column-close">
+						<svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5892 4.41073C15.9147 4.73617 15.9147 5.26381 15.5892 5.58925L5.58925 15.5892C5.26381 15.9147 4.73617 15.9147 4.41073 15.5892C4.0853 15.2638 4.0853 14.7362 4.41073 14.4107L14.4107 4.41073C14.7362 4.0853 15.2638 4.0853 15.5892 4.41073Z" fill="#FFFFFF"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.41073 4.41073C4.73617 4.0853 5.26381 4.0853 5.58925 4.41073L15.5892 14.4107C15.9147 14.7362 15.9147 15.2638 15.5892 15.5892C15.2638 15.9147 14.7362 15.9147 14.4107 15.5892L4.41073 5.58925C4.0853 5.26381 4.0853 4.73617 4.41073 4.41073Z" fill="#FFFFFF"/>
+						</svg>
+					</div>
 					<div class="tm-logo-div text-xs-center">
-						<img src="img/logo.jpeg" alt="logo">
+						<img src="img/logo.svg" alt="logo">
 					</div>
 					<nav class="tm-main-nav">
 						<ul class="tm-main-nav-ul">
