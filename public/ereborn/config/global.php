@@ -32,7 +32,7 @@
 	);
 
 	$templateMap = array(
-		0 => array("Content", "Home")
+		0 => array("Content", "Home","About")
 	);
 
 	$widgetWhiteList = array("");

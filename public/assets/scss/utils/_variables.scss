@@ -1,0 +1,69 @@
+/*colors*/
+$color-scheme: (
+    'main': #02283F,
+    'main-dark': #293241,
+    'primary': #EA411B,
+    'secondary': #181818, 
+    'neutral': #F1F2F5,
+    'error': #f3131a,
+    'success': #198754,
+    'white': #ffffff,
+    'black': #000000,
+);
+
+$shadows: (
+    'xs': 0px 4px 16px 0px #00000026,
+    'sm': 0px 16px 40px 0px #0000001A,
+);
+
+$color-main: map-get($color-scheme, 'main');
+$color-primary: map-get($color-scheme, 'primary');
+$color-secondary: map-get($color-scheme, 'secondary');
+
+// Z-index Order (From Hight To Low) starts with 101
+$z-indexes: (
+    'toast',
+    'header-dropdown',
+    'modal',
+    'header-actions',
+    'header-layer',
+    'header-menu',
+    'header',
+    'sticky-element',
+    'dropdown',
+);
+
+/* font */
+$defaultHtmlFont: "Tahoma", sans-serif;
+$fontPrimary: 'Mardoto';
+$baseFontFamily: $fontPrimary;
+$baseFontSize: 16;
+
+/*grid dimensions*/
+$mediaXxlLarge: 1366px;
+$mediaXlLarge: 1280px;
+$mediaLarge: 1024px;
+$mediaMedium: 768px;
+
+/* grid  */
+$columnsSize: 12; //count of columns
+$columnSpace: rem(16);
+$columnSpaceSm: rem(16);
+
+$buttonSizeLg: 48;
+$buttonSizeMd: 40;
+$buttonSizeSm: 32;
+
+$lgOffset: 152;
+$mdOffset: 66;
+$smOffset: 48;
+
+/*screenSizes*/
+$media-xxl: 1439px;
+$media-xl: 1365px;
+$media-lg: 1279px;
+$media-md: 1023px;
+$media-sm: 767px;
+$media-xs: 450px;
+
+

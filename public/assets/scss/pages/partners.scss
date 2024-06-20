@@ -1,0 +1,47 @@
+@import "../utils/_module";
+
+.partners {
+    margin-top: rem(72);
+    margin-bottom: rem(136);
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 71%;
+        background: linear-gradient(90.29deg, #FFFFFF 0.77%, #D0DAEA 99.75%);
+        opacity: 0.3;
+        border-radius: 0 rem(88) rem(88) 0;
+        z-index: -1;
+    }
+}
+
+@media (max-width: $media-lg) {
+    .partners {
+        &::after {
+            width: 85%;
+        }
+    } 
+}
+
+@media (max-width: $media-sm) {
+    .partners {
+        margin-top: rem(48);
+        margin-bottom: rem(64);
+        padding-bottom: 0;
+        padding-top: rem(32);
+    
+        &::after {
+            bottom: 0;
+            right: rem(8);
+            height: rem(1411);
+            width: initial;
+            border-radius: 0 rem(88) 0 0;
+        }
+    }   
+}

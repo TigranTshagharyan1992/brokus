@@ -3,32 +3,17 @@
 {
     global $db;
 
-    if( isset($_POST["template"]) && is_string($_POST["template"]) )
+    $query = "INSERT INTO entities
+			(entity_creation_date, entity_creator, entity_order, entity_parent, entity_visible, entity_removable, entity_is_widget)
+			VALUES
+			(UTC_TIMESTAMP(), ?, ?, ?, 1, 1, ?)";
+
+    $result = $db->request($query, array($_SESSION["user"], getEntityMaxOrder(), $parent, $isWidget));
+
+    $insertId = $db->insertId();
+    if($insertId)
     {
-        $template = searchTemplate($_POST["template"]);
-        if($template!==false)
-        {
-            $query = "INSERT INTO entities
-					(entity_creation_date, entity_creator, entity_order, entity_parent, entity_visible, entity_removable, entity_is_widget)
-					VALUES
-					(UTC_TIMESTAMP(), ?, ?, ?, 1, 1, ?)";
-
-            $result = $db->request($query, array($_SESSION["user"], getEntityMaxOrder(), $parent, $isWidget));
-
-            $insertId = $db->insertId();
-            if($insertId)
-            {
-                return $insertId;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
+        return $insertId;
     }
     else
     {

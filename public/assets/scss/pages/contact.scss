@@ -1,0 +1,254 @@
+@import "../utils/_module";
+@import "../components/_form-items";
+@import "../components/_modal";
+
+.contact {
+    margin-top: rem(72);
+    margin-bottom: rem(150);
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        background: linear-gradient(90.29deg, #FFFFFF 0.77%, #D0DAEA 99.75%);
+        opacity: 0.3;
+        border-radius: 0 rem(88) rem(88) 0;
+        z-index: -1;
+        @extend %not-selectable;
+    }
+
+    &__title {
+        margin-bottom: rem(40);
+    }
+
+    &__about {
+        max-width: rem(468);
+        margin-bottom: rem(72);
+
+        .about-item {
+            @include horizontal-decor('../../img/decor/horizontal.svg');
+            padding: rem(16) 0;
+
+            &::after {
+                top: rem(-1)
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+            &:first-child {
+                padding-top: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__map {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__cooperate {
+        &-title {
+            font-weight: 700;
+            line-height: rem(57);
+        }
+
+        &-desc {
+            font-style: italic;
+            opacity: 0.7;
+            font-weight: 500;
+            color: map-get($color-scheme, 'main-dark');
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__form {
+        .form-field__label {
+            color: #9E9E9E;
+            padding-left: rem(12);
+        }
+    }
+
+    &__form-submit {
+        margin-top: rem(40);
+        text-align: right;
+    }
+}
+
+.about-item {
+    @extend %flex;
+    @extend %align-middle;
+
+    &__icon {
+        @include flex(0, 0, auto);
+        color: #9DA1A8;
+        margin-right: rem(16);
+
+        .icon {
+            font-size: rem(56);
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+        line-height: rem(28);
+        color: #9DA1A8;
+    }
+
+    &__value {
+        font-weight: 500;
+        line-height: rem(42);
+    }
+}
+
+.main-map {
+    background-color: #fff;
+    border-radius: rem(30);
+    padding: rem(20);
+    box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.1);
+    width: calc(100% - rem(16));
+
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    &__wrap {
+        iframe {
+            width: 100%;
+            height: rem(464);
+        }
+    }
+}
+
+@media (max-width: $media-md) {
+    .contact {
+        margin-top: rem(48);
+        margin-bottom: rem(64);
+        padding-bottom: rem(32);
+        padding-top: rem(24);
+    
+        &::after {
+            width: initial;
+            right: rem(16);
+        }
+    
+        &__about {
+            max-width: 100%;
+            margin-bottom: rem(40);
+        }
+    
+        &__map {
+            position: static;
+            transform: none;
+            margin-bottom: rem(64);
+        }
+    }
+
+    .main-map {
+        border-radius: rem(30);
+        padding: rem(20);
+        width: 100%;
+    
+        &__title {
+            margin-bottom: rem(20);
+        }
+    
+        &__wrap {
+            iframe {
+                width: 100%;
+                height: rem(464);
+            }
+        }
+    }   
+}
+
+@media (max-width: $media-sm) {
+    .contact {
+        padding-top: rem(32);
+        padding-bottom: 0;
+    
+        &::after {
+            bottom: rem(20);
+            right: rem(8);
+            border-bottom-right-radius: 0;
+        }
+    
+        &__title {
+            margin-bottom: rem(24);
+        }
+    
+        &__about {
+            margin-bottom: rem(44);
+        }
+    
+        &__cooperate {
+            &-title {
+                font-weight: 700;
+                line-height: rem(32);
+                margin-bottom: rem(16);
+            }
+    
+            &-desc {
+                line-height: rem(20);
+                margin-bottom: rem(22);
+            }
+        }
+    
+        &__form {
+            .form-field__label {
+                padding-left: rem(10);
+            }
+        }
+    
+        &__form-submit {
+            margin-top: rem(24);
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+    
+    .about-item {
+        &__icon {
+            margin-right: rem(12);
+    
+            .icon {
+                font-size: rem(40);
+            }
+        }
+    
+        &__label {
+            line-height: rem(24);
+        }
+    
+        &__value {
+            line-height: rem(29);
+        }
+    }
+    
+    .main-map {
+        padding: rem(16);
+    
+        &__title {
+            margin-bottom: rem(16);
+        }
+    
+        &__wrap {
+            iframe {
+                height: rem(280);
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+@import "../utils/_module";
+
+.goals {
+    margin-bottom: rem(104);
+}
+.goal-block {
+    background-color: #F1F2F5;
+    border-radius: rem(32);
+    padding: rem(40);
+    flex-grow: 1;
+
+    &__icon {
+        margin-bottom: rem(20);
+    }
+
+    &__value {
+        font-weight: 900;
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+}
+
+.team {
+    padding-bottom: rem(144);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: rem(100);
+        left: 0;
+        bottom: 0;
+        width: 77%;
+        background: linear-gradient(90.29deg, #FFFFFF 0.77%, #464B53 99.75%);
+        opacity: 0.15;
+        border-radius: 0px 88px 0px 0px;
+        z-index: -1;
+    }
+
+    &__desc {
+        font-style: italic;
+        line-height: rem(32);
+        column-rule: map-get($color-scheme, 'main-dark');
+    }
+}
+
+.team-slider {
+    &__wrap {
+        background: #fff;
+        border: rem(1) solid #E1E1E1;
+        border-radius: rem(32);
+        padding: rem(32);
+        margin-bottom: rem(20);
+
+        .swiper {
+            border-radius: rem(24);
+        }
+    }
+
+    &__controls {
+        @extend %flex;
+        @extend %align-middle;
+    }
+
+    &__dots {
+        @extend %inline-flex;
+        margin-left: rem(235);
+
+        .swiper-pagination-bullet {
+            @include flex(0, 0, auto);
+            width: rem(16);
+            height: rem(16);
+            background-color: #fff;
+            border-radius: 50%;
+            margin-left: rem(24);
+            @extend %user-cursor;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background-color: #575757;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $media-lg) {
+    .goals {
+        &__list {
+            margin-top: rem(-32);
+
+            .goal-block {
+                margin-top: rem(32);
+            }
+        }
+    }
+
+    .team {
+        &::after {
+            width: 85%;
+        }
+    }
+}
+
+@media (max-width: $media-md) {
+    .goal-block {
+        border-radius: rem(24);
+        padding: rem(24);
+
+        &__icon {
+            margin-bottom: rem(8);
+        }
+    }
+
+    .team {
+        &::after {
+            top: rem(56);
+        }
+    }
+
+    .team-slider {
+        &__wrap {
+            border-radius: rem(24);
+            padding: rem(20);
+            margin-bottom: rem(20);
+    
+            .swiper {
+                border-radius: rem(16);
+            }
+        }
+    
+        &__dots {
+            margin-left: rem(100);
+    
+            .swiper-pagination-bullet {
+                width: rem(12);
+                height: rem(12);
+                margin-left: rem(12);
+            }
+        }
+    }
+}
+
+@media (max-width: $media-sm) {
+    .goals {
+        margin-bottom: rem(64);
+
+        &__list {
+            margin-top: rem(-16);
+
+            .column {
+                &:nth-child(odd) {
+                    .goal-block {
+                        margin-right: rem(-8);
+                    }
+                }
+                &:nth-child(even) {
+                    .goal-block {
+                        margin-left: rem(-8);
+                    }
+                }
+            }
+
+            .goal-block {
+                margin-top: rem(16);
+            }
+        }
+    }
+    .goal-block {
+        border-radius: rem(16);
+        padding: rem(16);
+    
+        &__icon {
+            margin-bottom: rem(5);
+        }
+    }
+
+    .team {
+        padding-bottom: rem(64);
+    
+        &::after {
+            top: rem(-32);
+            right: rem(40);
+            width: initial;
+        }
+
+        &__body {
+            margin-bottom: rem(16);
+        }
+    
+        &__desc {
+            line-height: rem(20);
+            max-width: rem(272);
+        }
+    }
+    
+    .team-slider {
+        &__wrap {
+            border-radius: rem(12);
+            padding: rem(10);
+            margin-bottom: rem(24);
+    
+            .swiper {
+                border-radius: rem(10);
+            }
+        }
+    
+        &__controls {
+            @include flex-flow(column-reverse, nowrap);
+            @include align-items(flex-start);
+        }
+    
+        &__dots {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: rem(8);
+    
+            .swiper-pagination-bullet {
+                width: rem(9.6);
+                height: rem(9.6);
+                margin-left: rem(15);
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .goal-block {
+        &__value {
+            font-size: rem(32);
+        }
+
+        &__title {
+            font-size: rem(11);
+        }
+    }
+}

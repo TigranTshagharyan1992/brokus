@@ -1,0 +1,52 @@
+$textSizes: (12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 34, 36, 38, 40, 48, 56, 64, 80);
+
+.h2-font {
+    @include font(900, 40, rem(72), inherit, 0);
+    @include font-media($media-lg, rem(32), rem(32));
+    @include font-media($media-sm, rem(24), rem(24));
+}
+
+.font {
+    @each $size in $textSizes {
+        &-#{$size} {
+            font-size: rem($size);
+        }
+    }
+}
+
+@media (max-width: $media-lg) {
+    .font-lg {
+        @each $size in $textSizes {
+            &-#{$size} {
+                font-size: rem($size);
+            }
+        }
+    }   
+}
+@media (max-width: $media-md) {
+    .font-md {
+        @each $size in $textSizes {
+            &-#{$size} {
+                font-size: rem($size);
+            }
+        }
+    }   
+}
+@media (max-width: $media-sm) {
+    .font-sm {
+        @each $size in $textSizes {
+            &-#{$size} {
+                font-size: rem($size);
+            }
+        }
+    }   
+}
+@media (max-width: $media-xs) {
+    .font-xs {
+        @each $size in $textSizes {
+            &-#{$size} {
+                font-size: rem($size);
+            }
+        }
+    }   
+}

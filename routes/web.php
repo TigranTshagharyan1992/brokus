@@ -15,13 +15,12 @@ use App\Http\Controllers as Controllers;
 */
 
 Route::group(['middleware'=> ['locale'], 'prefix'=>'{lang?}'], function() {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
-    Route::get('/test/mest', function () {
-        return view('welcome');
-    })->name('mypage');
-    Route::get('/my', [Controllers\MyController::class,'index'])->name('test');
+    Route::get('/', Controllers\HomeController::class)->name('home');
+    Route::get('/services', Controllers\ServicesController::class)->name('services');
+    Route::get('/price-policy', Controllers\PricePolicyController::class)->name('pricePolicy');
+    Route::get('/contacts', Controllers\ContactsController::class)->name('contacts');
+    Route::get('/about', Controllers\AboutController::class)->name('about');
+    Route::get('/partners', Controllers\PartnersController::class)->name('partners');
 });
 
 

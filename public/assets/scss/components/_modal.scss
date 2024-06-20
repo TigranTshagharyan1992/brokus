@@ -1,0 +1,243 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: z(modal);
+    @extend %flex;
+    @extend %hidden;
+    @extend %primary-transition;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &__wrapper {
+        height: 100%;
+        background-color: #fff;
+        width: 100%;
+        @include transition(all,0.5s,ease);
+    }
+
+    &__body {
+        overflow: auto;
+        max-height: 100%;
+        width: 100%;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            width: rem(7);
+
+            &-thumb {
+                background-color: #BDBDBD;
+
+                &:hover {
+                    background-color: #9b9b9b;
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: fixed;
+        width: rem(42);
+        height: rem(42);
+        @extend %flex;
+        @extend %align-middle;
+        @extend %align-center;
+        border-radius: 50%;
+        @extend %user-cursor;
+        z-index: 1;
+
+        img {
+            width: rem(18);
+        }
+    }
+
+    &__success, &__error {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend %hidden;
+        @extend %primary-transition;
+    }
+
+    &_sm {
+        .modal__wrapper {
+            max-width: rem(640);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: rem(24);
+        }
+        
+        .modal__content {
+            padding: rem(56);
+        }
+    }
+    &_md {
+        .modal__wrapper {
+            max-width: rem(774);
+        }
+        
+        .modal__content {
+            padding: rem(42) rem(24) rem(54);
+        }
+    }
+
+    // Placement ============
+    &.from-right {
+        @extend %align-right;
+
+        .modal__wrapper {
+            @include translate(100%, 0);
+        }
+    }
+    &.from-left {
+        @extend %align-left;
+
+        .modal__wrapper {
+            @include translate(-100%, 0);
+        }
+    }
+    &.center-modal {
+        @extend %align-center;
+        @extend %align-middle;
+
+        .modal__wrapper {
+            @extend %flex;
+            height: initial;
+            @include translate(0, 100%);
+        }
+    }
+
+    // Classes ===========
+    &.active {
+        @extend %show;
+
+        .modal__wrapper {
+            @include translate(0, 0);
+        }
+    }
+
+    &.success {
+        .modal__success {
+            position: static;
+            @extend %show;
+        }
+
+        .modal__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @extend %hidden;
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    &.error {
+        .modal__error {
+            position: static;
+            @extend %show;
+        }
+
+        .modal__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @extend %hidden;
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+.success-message, .error-message {
+    padding: rem(230) rem(16) rem(40);
+    text-align: center;
+
+    &__icon {
+        margin-bottom: rem(34);
+
+        img {
+            width: rem(50);
+        }
+    }
+
+    &__title {
+        max-width: rem(480);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__desc {
+        margin-top: rem(13);
+        max-width: rem(480);
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: normal;
+        font-size: rem(18);
+        line-height: 170%;
+        color: map-get($color-scheme, 'grey');
+        @include font-media($media-sm, rem(15), 0);
+        opacity: 0.8;
+    }
+}
+
+.success-modal {
+    &__icon {
+        margin-bottom: rem(24);
+
+        img {
+            width: rem(72);
+        }
+    }
+
+    &__title {
+        line-height: rem(56);
+        font-weight: bold;
+    }
+
+    &__desc {
+        opacity: 0.7;
+    }
+}
+
+
+@media (max-width: $media-sm) {
+    .modal {
+        &__body {
+            &::-webkit-scrollbar {
+                width: rem(5);
+            }
+        }
+
+        &_sm {
+            .modal__wrapper {
+                max-width: rem(328);
+                margin: 0 rem(16);
+            }
+            
+            .modal__content {
+                padding: rem(24);
+            }
+        }
+    }
+
+    .success-modal {
+        &__icon {
+            margin-bottom: rem(16);
+    
+            img {
+                width: rem(48);
+            }
+        }
+    
+        &__title {
+            line-height: rem(40);
+        }
+    
+        &__desc {
+            line-height: rem(28);
+        }
+    }
+}

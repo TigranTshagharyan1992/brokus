@@ -1,0 +1,254 @@
+.footer {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &_advanced {
+        background-color: map-get($color-scheme, 'main-dark');
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: rem(107);
+            @include center-absolute(horizontal);
+            width: rem(1760);
+            height: rem(752);
+            @include background('../img/decor/world.svg', top center, contain, no-repeat, transparent);
+        }
+
+        .footer {
+            &__wrap {
+                background-color: rgba(20, 25, 33, 0.2);
+            }
+        }
+    }
+
+    &__cooperate {
+        margin-bottom: rem(56);
+        padding-top: rem(64);
+        position: relative;
+        z-index: 1;
+    }
+
+    &__main {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__wrap {
+        background-color: #141921;
+        border-radius: rem(40) rem(40) 0 0;
+        padding: rem(48) rem(152);
+        backdrop-filter: blur(40px);
+    }
+
+    &__content {
+        margin-bottom: rem(32);
+        @extend %flex;
+        @extend %align-top;
+    }
+
+    &__logo {
+        margin-right: rem(256);
+        @include flex(0, 0, auto);
+    }
+
+    &__nav {
+        margin-right: rem(200);
+    }
+
+    &__links {
+        @extend %flex;
+        @extend %align-top;
+        @include flex-flow(column, nowrap);
+    }
+
+    &__link {
+        margin-top: rem(16);
+        line-height: rem(20);
+    }
+
+    &__about {
+        .info-pair {
+            margin-top: rem(16);
+        }
+    }
+
+    &__social {
+        margin-top: rem(16);
+
+        .btn {
+            margin-right: rem(16);
+        }
+    }
+
+    &__copyright {
+        @include horizontal-decor('../img/decor/horizontal-blue-300.svg');
+        padding-top: rem(32);
+
+        &::after {
+            top: rem(-1);
+        }
+    }
+}
+
+.cooperate {
+    &__wrap {
+        @extend %flex;
+    }
+
+    &__heading {
+        @include flex(0, 0, 45%);
+        max-width: 45%;
+        padding-top: rem(22);
+    }
+
+    &__title {
+        line-height: rem(64);
+        margin-bottom: rem(16);
+    }
+
+    &__desc {
+        font-style: italic;
+        color: rgba($color: #fff, $alpha: 0.7);
+        max-width: rem(360);
+        line-height: rem(40);
+    }
+
+    &__form {
+        @include flex(0, 0, 55%);
+        max-width: 55%;
+    }
+
+    &__form-submit {
+        text-align: right;
+        margin-top: rem(40);
+    }
+}
+
+
+@media (max-width: $media-lg) {
+    .footer {
+        &__wrap {
+            padding-left: rem(66);
+            padding-right: rem(66);
+        }
+    
+        &__logo {
+            margin-right: rem(150);
+        }
+    
+        &__nav {
+            margin-right: rem(130);
+        }
+    }   
+}
+
+@media (max-width: $media-md) {
+    .footer {
+        &__wrap {
+            padding: rem(32) rem(48); 
+        }
+
+        &__cooperate {
+            padding-top: rem(48);
+        }
+
+        &__content {
+            @include flex-flow(row, wrap);
+        }
+    
+        &__logo {
+            @include flex(0, 0, 100%);
+            margin-right: 0;
+            margin-bottom: rem(32);
+        }
+    
+        &__nav {
+            @include flex(0, 0, 50%);
+            margin-right: 0;
+        }
+
+        &__about {
+            @include flex(0, 0, 50%);
+        }
+    }
+
+    .cooperate {
+        &__wrap {
+            display: block;
+        }
+    
+        &__heading {
+            @include flex(0, 0, 100%);
+            max-width: 100%;
+            padding-top: 0;
+            margin-bottom: rem(32);
+        }
+    
+        &__title {
+            line-height: rem(56);
+        }
+    
+        &__desc {
+            max-width: rem(360);
+            line-height: rem(32);
+        }
+    
+        &__form {
+            @include flex(0, 0, 100%);
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: $media-sm) {
+    .footer {
+        &__wrap {
+            padding: rem(24) rem(16);
+            margin-left: rem(-16);
+            margin-right: rem(-16);
+            border-radius: rem(24) rem(24) 0 0;
+        }
+
+        &__cooperate {
+            padding-top: rem(32);
+        }
+    
+        &__nav {
+            @include flex(0, 0, 100%);
+            margin-bottom: rem(32);
+        }
+
+        &__link {
+            margin-top: rem(8);
+        }
+
+        &__about {
+            @include flex(0, 0, 100%);
+        }
+    }
+
+    .cooperate {
+        &__heading {
+            margin-bottom: rem(22);
+        }
+    
+        &__title {
+            line-height: rem(32);
+        }
+    
+        &__desc {
+            line-height: rem(20);
+            max-width: initial;
+        }
+
+        &__form-submit {
+            margin-top: rem(24);
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

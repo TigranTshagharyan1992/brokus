@@ -1,0 +1,180 @@
+.btn {
+    position: relative;
+    @extend %inline-flex;
+    @extend %align-middle;
+    @extend %align-center;
+    @extend %primary-transition;
+    max-width: 100%;
+    border-radius: rem(8);
+
+    &[type="submit"] {
+        @extend %user-cursor;
+    }
+
+    & > span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    // types ******************************
+    &_main {
+        border: rem(1) solid $color-main;
+        background-color: $color-main;
+        color: #fff;
+    }
+
+    &_primary {
+        border: rem(1) solid $color-primary;
+        background-color: $color-primary;
+        color: #fff;
+
+        &-border {
+            border: rem(1) solid $color-primary;
+            color: $color-primary;
+
+            &:hover {
+                background-color: rgba(254, 75, 36, 0.15);
+            }
+        }
+    }
+
+    &_white {
+        &-border {
+            border: rem(1) solid #fff;
+            color: #fff;
+        }
+    }
+
+    // sizes ***************************
+    &_sm {
+        height: rem($buttonSizeSm);
+
+        & > img,& > svg, & > .icon {
+            &:first-child {
+                margin-right: rem(8);
+            }
+            &:last-child {
+                margin-left: rem(8);
+            }
+        }
+
+        &.btn_badge {
+            width: rem($buttonSizeSm);
+            border-radius: 50%;
+
+            & > img,& > svg, & > .icon {
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &_md {
+        height: rem($buttonSizeMd);
+
+        & > img,& > svg, & > .icon {
+            font-size: rem(24);
+            
+            &:first-child {
+                margin-right: rem(8);
+            }
+            &:last-child {
+                margin-left: rem(8);
+            }
+        }
+
+        &.btn_badge {
+            width: rem($buttonSizeMd);
+            border-radius: 50%;
+
+            & > img,& > svg, & > .icon {
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @media (max-width: $media-sm) {
+            height: rem(32);
+
+            &.btn_badge {
+                width: rem(32);
+
+                & > img,& > svg, & > .icon {
+                    font-size: rem(20);
+                }
+            }
+        }
+    }
+    &_lg {
+        height: rem($buttonSizeLg);
+
+        & > img,& > svg, & > .icon {
+            font-size: rem(24);
+            width: rem(24);
+            
+            &:first-child {
+                margin-right: rem(8);
+            }
+            &:last-child {
+                margin-left: rem(8);
+            }
+        }
+
+        &.btn_badge {
+            width: rem($buttonSizeLg);
+            border-radius: 50%;
+
+            & > img,& > svg, & > .icon {
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @media (max-width: $media-sm) {
+            height: rem(40);
+
+            & > img,& > svg, & > .icon {
+                &:first-child {
+                    margin-right: rem(4);
+                }
+                &:last-child {
+                    margin-left: rem(4);
+                }
+            }
+        }
+    }
+
+    &_space_md {
+        padding-left: rem(16);
+        padding-right: rem(8);
+
+        // @media (max-width: $media-xs) {
+        //     padding-left: rem(7);
+        //     padding-right: rem(7);
+        // }
+    }
+
+    &_space_lg {
+        padding-left: rem(16);
+        padding-right: rem(12);
+
+        // @media (max-width: $media-xs) {
+        //     padding-left: rem(9);
+        //     padding-right: rem(9);
+        // }
+    }
+}
