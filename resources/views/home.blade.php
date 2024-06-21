@@ -23,9 +23,14 @@
 
             <div class="hero-block__content">
                 <h1 class="hero-block__title font-48 font-lg-34 font-sm-28">
-                    ԲԱՐԻ ԳԱԼՈՒՍՏ BROKUS<small>.am</small>
+                    @if(explode(".",  $data->entityDataLang->edl_title))
+                        @php($title = explode(".",  $data->entityDataLang->edl_title))
+                        {{$title[0]}}<small>.{{$title[1]}}</small>
+                    @else
+                        {{$data->entityDataLang->edl_title}}
+                    @endif
                 </h1>
-                <div class="hero-block__desc font-20 font-lg-18 font-sm-14">Յուրաքանչյուր խնդիր ունի իր ճիշտ լուծումը...</div>
+                <div class="hero-block__desc font-20 font-lg-18 font-sm-14">{{$data->entityDataLang->edl_text_1}}</div>
                 <div class="hero-block__btn">
                     <a href="?p=about" class="btn btn_lg color-primary">
                         <span class="font-sm-14">մեր մասին</span>

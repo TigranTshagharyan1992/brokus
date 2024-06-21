@@ -18,7 +18,6 @@ class Locale
 
         $languages = ['hy' =>1, 'ru'=>2, 'en'=>3];
         $lang='hy';
-//        dd($request);
         if ($request->method() === 'GET') {
             if($request->segment(1)){
                 $lang = $request->segment(1);

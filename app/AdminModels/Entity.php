@@ -46,7 +46,6 @@ class Entity extends Model
     }
 
     public function entityDataLang() : HasOne {
-        var_dump($this->LANG);
         return $this->HasOne(EntityDataLang::class, 'edl_entity', 'entity_id')
             ->where('edl_lang', $this->LANG);
     }
