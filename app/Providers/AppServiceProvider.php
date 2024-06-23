@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 //use App\View\Composers\DataComposer;
+use App\View\Composers\ContentComposer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -22,10 +23,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer('layouts.language_switcher', function ($view) {
+        view()->composer(['layouts.language_switcher','layouts.footer'], function ($view) {
             $view->with('current_locale', app()->getLocale());
             $view->with('available_locales', config('app.languages'));
             $view->with('currentRouteName', Route::currentRouteName());
         });
+
+        view()->composer(
+            ['*'],
+            ContentComposer::class
+        );
     }
 }

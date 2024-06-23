@@ -22,29 +22,29 @@
                         <div class="header-menu__wrap">
                             <nav class="header-menu__nav">
                                 <div class="header-menu__link active">
-                                    <a href="{{ route('about') }}">Մեր մասին</a>
+                                    <a href="{{ route('about') }}">{{GetData::findWord($content, 0)}}</a>
                                 </div>
                                 <div class="header-menu__link">
-                                    <a href="{{ route('services') }}">Գործառույթներ</a>
+                                    <a href="{{ route('services') }}">{{GetData::findWord($content, 1)}}</a>
                                 </div>
                                 <div class="header-menu__link">
-                                    <a href="{{ route('pricePolicy') }}">Գնային քաղաքականություն</a>
+                                    <a href="{{ route('pricePolicy') }}">{{GetData::findWord($content, 2)}}</a>
                                 </div>
                                 <div class="header-menu__link">
-                                    <a href="{{ route('partners') }}">Գործընկերներ</a>
+                                    <a href="{{ route('partners') }}">{{GetData::findWord($content, 3)}}</a>
                                 </div>
                                 <div class="header-menu__link">
-                                    <a href="{{ route('contacts') }}">Կապ</a>
+                                    <a href="{{ route('contacts') }}">{{GetData::findWord($content, 4)}}</a>
                                 </div>
                             </nav>
                             <div class="header-menu__footer">
                                 <div class="header-menu__about">
-                                    <a href="tel:+37491052052" class="info-pair">
+                                    <a href="tel: {{GetData::findWord($content, 14)}}" class="info-pair">
                                         <div class="info-pair__icon">
                                             <i class="icon icon-phone"></i>
                                         </div>
                                         <div class="info-pair__value">
-                                            (+374) 91 052 052
+                                            {{GetData::findWord($content, 14)}}
                                         </div>
                                     </a>
                                     <div class="info-pair">
@@ -52,7 +52,7 @@
                                             <i class="icon icon-message"></i>
                                         </div>
                                         <div class="info-pair__value">
-                                            office@brokus.am
+                                            {{GetData::findWord($content, 16)}}
                                         </div>
                                     </div>
                                     <div class="info-pair">
@@ -60,18 +60,18 @@
                                             <i class="icon icon-pin"></i>
                                         </div>
                                         <div class="info-pair__value">
-                                            Ծովակալ Իսակովի պող․ շենք 10
+                                            {{GetData::findWord($content, 17)}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="header-menu__social">
-                                    <a href="#" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                    <a href="{{GetData::findWord($content, 18)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
                                         <i class="icon icon-facebook"></i>
                                     </a>
-                                    <a href="#" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                    <a href="{{GetData::findWord($content, 19)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
                                         <i class="icon icon-instagram"></i>
                                     </a>
-                                    <a href="#" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                    <a href="{{GetData::findWord($content, 20)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
                                         <i class="icon icon-linkedin"></i>
                                     </a>
                                 </div>

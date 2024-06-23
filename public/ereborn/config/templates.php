@@ -43,18 +43,25 @@ $home = array(
 
 $service = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
-);
-
-$serviceItem = array(
-    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
-    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>false),
-    array("title"=>"File", "type"=>"file", "name"=>"ed_char_1"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>true),
+    array("title"=>"Գործնական պրոցես", "type"=>"text", "name"=>"edl_char_1"),
+    array("title"=>"Գործնական պրոցես 1", "type"=>"textarea", "name"=>"edl_text_2","isRichText"=>false),
+    array("title"=>"Գործնական պրոցես 2", "type"=>"textarea", "name"=>"edl_text_3","isRichText"=>false),
+    array("title"=>"Գործնական պրոցես 3", "type"=>"textarea", "name"=>"edl_text_4","isRichText"=>false),
+    array("title"=>"Գործնական պրոցես 4", "type"=>"textarea", "name"=>"edl_text_5","isRichText"=>false),
+    array("title"=>"Գործնական պրոցես 5", "type"=>"textarea", "name"=>"edl_text_6","isRichText"=>false),
+    array("title"=>"1 ՓՈՒԼ", "type"=>"text", "name"=>"edl_char_2"),
+    array("title"=>"2 ՓՈՒԼ", "type"=>"text", "name"=>"edl_char_3"),
+    array("title"=>"3 ՓՈՒԼ", "type"=>"text", "name"=>"edl_char_4"),
+    array("title"=>"4 ՓՈՒԼ", "type"=>"text", "name"=>"edl_char_5"),
+    array("title"=>"Ցանկանում եք Համագործակցե՞լ Գրեք Մեզ", "type"=>"text", "name"=>"edl_char_6"),
+    array("title"=>"ՈՒՂԱՐԿԵԼ ՆԱՄԱԿ", "type"=>"text", "name"=>"edl_char_7"),
 );
 
 $about = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
-    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>false),
-    array("title"=>"Մեր ձեռքբերումները", "type"=>"text", "name"=>"edl_char_1"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>true),
+    array("title"=>"Մեր ձեռքբերումները", "type"=>"text", "name"=>"edl_char_6"),
     array("title"=>"ՏԱՐԻ ՇՈՒԿԱՅՈՒՄ", "type"=>"text", "name"=>"edl_char_1"),
     array("title"=>"ՏԱՐԻ ՇՈՒԿԱՅՈՒՄ թիվ", "type"=>"text", "name"=>"ed_char_1"),
     array("title"=>"ԳՈՐԾԸՆԿԵՐՆԵՐ", "type"=>"text", "name"=>"edl_char_2"),
@@ -70,12 +77,14 @@ $about = array(
 $content = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
 );
+
+
 ?>
 <?php
 $templates = array(
     array("id"=>"Home", "title"=>"Գլխավոր էջ", "fields"=>$home, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"About", "title"=>"Մեր մասին", "fields"=>$about, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Service", "title"=>"ԳՈՐԾԱՌՈՒՅԹՆԵՐԸ", "fields"=>$service, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"Content", "title"=>"Կրկնվոք Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Content", "title"=>"Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
 );
 ?>

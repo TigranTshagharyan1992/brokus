@@ -25,7 +25,7 @@ class GetData
         if ($with) {
             $records->with($with);
         } else {
-            $records->with('entityData','entitySEO', 'entityDataLang', 'entityGallery', 'entityGallery.entityGalleryLang');
+            $records->with('entityData','entitySEO', 'entityDataLang', 'entityGallery','entityWords','entityGallery.entityGalleryLang');
         }
         return $records->first();
     }
@@ -173,20 +173,6 @@ class GetData
     }
 
 
-    public static function image($path)
-    {
-        $relativePath = str_replace("../", "", $path);
-
-        $fullPath = getcwd()."/".$relativePath;
-        if( is_file($fullPath) )
-        {
-            return $relativePath;
-        }
-        else
-        {
-            return false;
-        }
-    }
 
     public static function thumbnail($path, $width, $height, $method, $extension = "original")
     {

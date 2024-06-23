@@ -37,6 +37,21 @@ class Helper
         return $unit;
     }
 
+    public static function image($path)
+    {
+        $relativePath = str_replace("../", "", $path);
+
+        $fullPath = getcwd()."/".$relativePath;
+        if( is_file($fullPath) )
+        {
+            return $relativePath;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public static function seoUrlOrId($obj)
     {
             if(isset($obj->entitySEO->es_url) && $obj->entitySEO->es_url)

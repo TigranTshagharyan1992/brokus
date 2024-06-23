@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\GetData;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -11,7 +12,8 @@ class AboutController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $data = '';
-        return view('home', compact('data'));
+        $data =  GetData::getElement(ABOUT);
+
+        return view('about', compact('data'));
     }
 }

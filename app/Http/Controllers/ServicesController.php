@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\GetData;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -11,7 +12,8 @@ class ServicesController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $data = '';
-        return view('home', compact('data'));
+        $data =  GetData::getElement(SERVICES,['entityData','entityDataLang','entitySeo']);
+
+        return view('services', compact('data'));
     }
 }

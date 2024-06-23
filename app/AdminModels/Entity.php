@@ -59,7 +59,8 @@ class Entity extends Model
     }
 
     public function entityWords(): HasMany {
-        return $this->HasMany(EntityWords::class, 'ew_entity', 'entity_id');
+        return $this->HasMany(EntityWords::class, 'ew_entity', 'entity_id')
+        ->where('ew_lang', $this->LANG);
     }
 
     public function entitySeo(): HasOne {
