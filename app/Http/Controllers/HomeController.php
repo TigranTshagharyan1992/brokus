@@ -14,6 +14,7 @@ class HomeController extends Controller
     {
 
         $data =  GetData::getElement(HOME,['entityData','entityDataLang','entitySeo']);
-        return view('home', compact('data'));
+        $partners =  GetData::getData(['entity_parent' => PARTNERS],['entity_order' => 'DESC']);
+        return view('home', compact('data','partners'));
     }
 }

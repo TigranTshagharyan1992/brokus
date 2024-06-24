@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="hero-block__img">
-            <img width="1216" height="624" src="assets/img/hero.jpg" alt="Brokus">
+            <img width="1216" height="624" src="{{asset(\App\Helpers\Helper::image($data->entityData->ed_image))}}" alt="Brokus">
         </div>
     </div>
     <div class="hero-block__numbers numbers-block">
@@ -165,90 +165,15 @@
         <div class="column sm-12">
             <div class="partners__list">
                 <div class="row">
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
+                    @foreach($partners as $partner)
+                        <div class="column sm-6 md-4 lg-3 xl-2">
+                            <div class="partner-item">
+                                <div class="partner-item__logo">
+                                    <img src="{{asset(\App\Helpers\Helper::image($partner->entityData->ed_image))}}" alt="{{$partner->entityDataLang->edl_title}}">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/chronograph.svg" alt="Chronograph">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/tom-tailor.svg" alt="tom-tailor">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/calvin-klein.svg" alt="celvin-clein">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-6 md-4 lg-3 xl-2">
-                        <div class="partner-item">
-                            <div class="partner-item__logo">
-                                <img src="assets/img/partners/c&f.svg" alt="c&f">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -273,9 +198,9 @@
                         <div class="success-modal__icon">
                             <img src="{{asset('assets/img/success.svg')}}" alt="Success">
                         </div>
-                        <div class="success-modal__title font-32 font-lg-26 font-sm-20">ՇՆՈՐՀԱԿԱԼՈՒԹՅՈՒՆ!</div>
+                        <div class="success-modal__title font-32 font-lg-26 font-sm-20">{{GetData::findWord($content, 34)}}</div>
                         <div class="success-modal__desc font-20 font-lg-18 font-sm-16">
-                            Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է
+                            {{GetData::findWord($content, 35)}}
                         </div>
                     </div>
                 </div>

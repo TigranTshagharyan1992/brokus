@@ -62,11 +62,15 @@
             "Մաքսային վճարումների ծանուցագիր",
             "Մաքսային պահեստ",
             "Վճարումները հաստատող անդորրագիր",
+            "ՀԵՌԱԽՈՍԱՀԱՄԱՐ",
+            "Հասցե",
+            "ՇՆՈՐՀԱԿԱԼՈՒԹՅՈՒՆ!",
+            "Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է",
         )
     );
 
 	$templateMap = array(
-		0 => array("Content", "Home", "About", "Service")
+		0 => array("Content", "Home", "About", "Service","PricePolicy","Partners","Contact")
 	);
 
 	$widgetWhiteList = array("");
@@ -78,6 +82,7 @@
 	$additionalColumnsInWidgets = array(/*"ed_number_1"=>"Թիվ 1"*/);
 
 	$templateChildren = array(
+        "Partners" => ["Partner"]
 	);
 
 	$templateAdditionalColumns = array(

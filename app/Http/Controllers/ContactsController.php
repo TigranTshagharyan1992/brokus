@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\GetData;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -11,7 +12,7 @@ class ContactsController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $data = '';
-        return view('home', compact('data'));
+        $data = GetData::getElement(CONTACT);
+        return view('contact', compact('data'));
     }
 }

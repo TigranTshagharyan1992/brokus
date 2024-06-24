@@ -22,7 +22,7 @@
                                             </div>
                                         </div>
                                         <div class="form-field form-field_default form-field_md">
-                                            <div class="form-field__label">ՀԵՌԱԽՈՍԱՀԱՄԱՐ</div>
+                                            <div class="form-field__label">{{GetData::findWord($content, 32)}}</div>
                                             <div class="form-field__target">
                                                 <input type="number" name="phone" class="form-field__input" required>
                                             </div>

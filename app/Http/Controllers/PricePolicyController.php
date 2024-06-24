@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\GetData;
 use Illuminate\Http\Request;
 
 class PricePolicyController extends Controller
@@ -11,7 +12,9 @@ class PricePolicyController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $data = '';
-        return view('home', compact('data'));
+
+        $data =  GetData::getElement(PRICE_POLICY,['entityData','entityDataLang','entitySeo']);
+
+        return view('pricePolicy', compact('data'));
     }
 }

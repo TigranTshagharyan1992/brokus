@@ -74,6 +74,28 @@ $about = array(
     array("title"=>"Մեր թիմը Text", "type"=>"textarea", "name"=>"edl_text_2","isRichText"=>false),
 );
 
+$partners = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+);
+$partner = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Title", "type"=>"file", "name"=>"ed_image"),
+);
+
+$pricePolicy = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>true),
+    array("title"=>"Պարտադիր", "type"=>"text", "name"=>"edl_char_1"),
+    array("title"=>"Պարտադիր Text", "type"=>"textarea", "name"=>"edl_text_2","isRichText"=>false),
+    array("title"=>"Ցանկալի", "type"=>"text", "name"=>"edl_char_2"),
+    array("title"=>"Ցանկալի Text", "type"=>"textarea", "name"=>"edl_text_3","isRichText"=>false),
+
+);
+
+$contacts = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+);
+
 $content = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
 );
@@ -85,6 +107,10 @@ $templates = array(
     array("id"=>"Home", "title"=>"Գլխավոր էջ", "fields"=>$home, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"About", "title"=>"Մեր մասին", "fields"=>$about, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Service", "title"=>"ԳՈՐԾԱՌՈՒՅԹՆԵՐԸ", "fields"=>$service, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"PricePolicy", "title"=>"Գնային Քաղաքականույթուն", "fields"=>$pricePolicy, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Partners", "title"=>"Գործընկերներ", "fields"=>$partners, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Partner", "title"=>"Գործընկեր", "fields"=>$partner, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Contact", "title"=>"Կապ", "fields"=>$contacts, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Content", "title"=>"Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
 );
 ?>
