@@ -11,20 +11,21 @@
 .btn.red,a.delFile,.deliteSection,.deleteButton{
 	background-color: #F05D5E;
 }
+
 .tm-blue-bg {
-	background: #00a54f;
+	background: #0108136b;
 }
 
 .btn.blue {
-	background: #00a54f;
+	background: #5dc288;
 }
 
 a.active, a.tm-nav-item-link:hover{
-	background: #5cb85c;
+	background: #6f6f6f;
 }
 
 .childLink,.tabs-title {
-	color: #00a54f;
+	color: #5dc288;
 }
 .breadCrumb,.fileExtension,.pickedDelete{
 	color: #275066;
@@ -43,12 +44,12 @@ body {
 }
 
 .form-control{
-	border-color:#00a54f;
+	border-color:#5dc288;
 	background: rgba(61, 140, 91, 0.05);
 }
 
 .form-control:focus{
-	border-color:#00a54f;
+	border-color:#5dc288;
 	background: rgba(61, 140, 91, 0.05);
 }
 

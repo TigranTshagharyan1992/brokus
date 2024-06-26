@@ -14,7 +14,7 @@
 		0 => "entity_id DESC",
 	);
 
-	$disableAddButtonIn = array();
+	$disableAddButtonIn = array(0);
 
 	$disableImagesIn = array();
 
@@ -84,6 +84,13 @@
 	$templateChildren = array(
         "Partners" => ["Partner"],
         "Contact" => ["Message"],
+        "Content" => [],
+        "Home" => [],
+        "About" => [],
+        "Service" => [],
+        "PricePolicy" => [],
+
+
 	);
 
 	$templateAdditionalColumns = array(

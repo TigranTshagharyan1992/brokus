@@ -147,26 +147,7 @@
 									<div class="tm-main-nav">
 										<button type="submit" name="login" class="tm-button  btn blue">Login</button>
 									</div>
-									<div class="text-xs-center">
-										Copyright © ZOOM GRAPHICS forever. Made in Republic of Armenia
-										<a href="https://www.zoom.am/" target="_blank">
-											www.zoom.am
-										</a>
-									</div>
 								</form>
-								<div class="tm-main-nav zoom-wrapp">
-									<div class="zoom-item align-mid">
-										<a href="https://www.zoom.am/" target="_blank">
-											<img src="img/zoom.svg" alt="">
-											<span>
-                                                ZOOM GHRAPHICS
-											</span>
-										</a>
-									</div>
-									<div class="zoom-item align-mid">
-                                        POLNIY FULL™ MANAGEMENT SYSTEM
-									</div>
-								</div>
 							</div>
 
 						</div>
