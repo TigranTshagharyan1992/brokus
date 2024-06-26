@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer(['layouts.language_switcher','layouts.footer'], function ($view) {
+        view()->composer(['layouts.language_switcher','layouts.footer','layouts.header'], function ($view) {
             $view->with('current_locale', app()->getLocale());
             $view->with('available_locales', config('app.languages'));
             $view->with('currentRouteName', Route::currentRouteName());

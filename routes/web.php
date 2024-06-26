@@ -21,6 +21,7 @@ Route::group(['middleware'=> ['locale'], 'prefix'=>'{lang?}'], function() {
     Route::get('/contacts', Controllers\ContactsController::class)->name('contacts');
     Route::get('/about', Controllers\AboutController::class)->name('about');
     Route::get('/partners', Controllers\PartnersController::class)->name('partners');
+    Route::post('/send-mail', Controllers\ContactController::class)->name('contact');
 });
 
 

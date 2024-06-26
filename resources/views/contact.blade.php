@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-{{--@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection--}}
+@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection
 
-{{--@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection--}}
+@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection
 
-{{--@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection--}}
+@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection
 
 @section('styles')
 
@@ -75,7 +75,8 @@
             <div class="contact__cooperate" id="cooperate">
                 <div class="contact__cooperate-title font-32 font-lg-28 font-sm-24">{{GetData::findWord($content, 6)}}</div>
                 <div class="contact__cooperate-desc font-20 font-lg-18 font-sm-16">{{GetData::findWord($content, 7)}}</div>
-                <form action="#" class="contact__form">
+                <form method="post" action="{{ route('contact',['lang' => app()->getLocale()]) }}" class="contact__form">
+                    @csrf
                     <div class="form-fields">
                         <div class="form-fields__item">
                             <div class="form-field form-field_default form-field_default-border form-field_md">
@@ -119,8 +120,10 @@
         </div>
     </div>
 </div>
-
-<div class="modal success-modal modal_sm center-modal">
+@if($errors->any())
+    <h4>{{$errors->first()}}</h4>
+@endif
+<div class="modal success-modal modal_sm center-modal {{Session::get('success') == 'true'?'active':''}}">
     <div class="modal__wrapper">
         <div class="modal__body">
             <div class="modal__content text-center">

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-{{--@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection--}}
+@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection
 
-{{--@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection--}}
+@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection
 
-{{--@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection--}}
+@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection
 
 @section('styles')
 

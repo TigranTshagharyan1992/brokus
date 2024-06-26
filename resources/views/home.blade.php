@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-{{--@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection--}}
+@section('title') {{ $data->entitySeo->es_title ?? $data->entityDataLang->edl_title }} @endsection
 
-{{--@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection--}}
+@section('keywords') {{ $data->entitySeo->es_keywords ?? ''}} @endsection
 
-{{--@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection--}}
+@section('description') {{ $data->entitySeo->es_description ?? ''}} @endsection
 
 @section('styles')
     <!-- Page Css -->
@@ -41,7 +41,7 @@
 
             <div class="hero-block__footer">
                 <div class="hero-block__about">
-                    <a href="{{GetData::findWord($content, 14)}}" class="info-pair">
+                    <a href="tel: {{GetData::findWord($content, 14)}}" class="info-pair">
                         <div class="info-pair__icon">
                             <i class="icon icon-phone"></i>
                         </div>
@@ -187,9 +187,10 @@
         </div>
     </div>
 </div>
-
-
-<div class="modal success-modal modal_sm center-modal">
+@if($errors->any())
+    <h4>{{$errors->first()}}</h4>
+@endif
+<div class="modal success-modal modal_sm center-modal {{Session::get('success') == 'true'?'active':''}}">
     <div class="modal__wrapper">
         <div class="modal__body">
             <div class="modal__content text-center">

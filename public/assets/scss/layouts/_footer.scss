@@ -13,7 +13,7 @@
             @include center-absolute(horizontal);
             width: rem(1760);
             height: rem(752);
-            @include background('../img/decor/world.svg', top center, contain, no-repeat, transparent);
+            @include background('../img/decor/world.png', top center, contain, no-repeat, transparent);
         }
 
         .footer {
@@ -133,21 +133,21 @@
             padding-left: rem(66);
             padding-right: rem(66);
         }
-    
+
         &__logo {
             margin-right: rem(150);
         }
-    
+
         &__nav {
             margin-right: rem(130);
         }
-    }   
+    }
 }
 
 @media (max-width: $media-md) {
     .footer {
         &__wrap {
-            padding: rem(32) rem(48); 
+            padding: rem(32) rem(48);
         }
 
         &__cooperate {
@@ -157,13 +157,13 @@
         &__content {
             @include flex-flow(row, wrap);
         }
-    
+
         &__logo {
             @include flex(0, 0, 100%);
             margin-right: 0;
             margin-bottom: rem(32);
         }
-    
+
         &__nav {
             @include flex(0, 0, 50%);
             margin-right: 0;
@@ -178,23 +178,23 @@
         &__wrap {
             display: block;
         }
-    
+
         &__heading {
             @include flex(0, 0, 100%);
             max-width: 100%;
             padding-top: 0;
             margin-bottom: rem(32);
         }
-    
+
         &__title {
             line-height: rem(56);
         }
-    
+
         &__desc {
             max-width: rem(360);
             line-height: rem(32);
         }
-    
+
         &__form {
             @include flex(0, 0, 100%);
             max-width: 100%;
@@ -214,7 +214,7 @@
         &__cooperate {
             padding-top: rem(32);
         }
-    
+
         &__nav {
             @include flex(0, 0, 100%);
             margin-bottom: rem(32);
@@ -233,11 +233,11 @@
         &__heading {
             margin-bottom: rem(22);
         }
-    
+
         &__title {
             line-height: rem(32);
         }
-    
+
         &__desc {
             line-height: rem(20);
             max-width: initial;

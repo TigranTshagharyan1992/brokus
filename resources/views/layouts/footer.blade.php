@@ -12,7 +12,8 @@
                                 <h3 class="cooperate__title h2-font title-space_sm">{{GetData::findWord($content, 6)}}</h3>
                                 <div class="cooperate__desc font-20 font-sm-16">{{GetData::findWord($content, 7)}}</div>
                             </div>
-                            <form action="#" class="cooperate__form">
+                            <form method="post" action="{{ route('contact',['lang' => app()->getLocale()]) }}" class="cooperate__form">
+                                @csrf
                                 <div class="form-fields">
                                     <div class="form-fields__item">
                                         <div class="form-field form-field_default form-field_md">

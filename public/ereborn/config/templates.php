@@ -96,9 +96,17 @@ $contacts = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
 );
 
+$message = array(
+    array("title"=>"ԱՆՈՒՆ ԱԶԳԱՆՈՒՆ", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"ՀԵՌԱԽՈՍԱՀԱՄԱՐ", "type"=>"text", "name"=>"ed_char_1"),
+    array("title"=>"ԷԼ․ ՀԱՍՑԵ", "type"=>"text", "name"=>"ed_char_2"),
+    array("title"=>"ՀԱՂՈՐԴԱԳՐՈՒԹՅՈՒՆ", "type"=>"textarea", "name"=>"ed_text_1","isRichText"=>false),
+);
+
 $content = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
 );
+
 
 
 ?>
@@ -106,11 +114,12 @@ $content = array(
 $templates = array(
     array("id"=>"Home", "title"=>"Գլխավոր էջ", "fields"=>$home, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"About", "title"=>"Մեր մասին", "fields"=>$about, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"Service", "title"=>"ԳՈՐԾԱՌՈՒՅԹՆԵՐԸ", "fields"=>$service, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"PricePolicy", "title"=>"Գնային Քաղաքականույթուն", "fields"=>$pricePolicy, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"Partners", "title"=>"Գործընկերներ", "fields"=>$partners, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"Partner", "title"=>"Գործընկեր", "fields"=>$partner, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
-    array("id"=>"Contact", "title"=>"Կապ", "fields"=>$contacts, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Service", "title"=>"ԳՈՐԾԱՌՈՒՅԹՆԵՐԸ", "fields"=>$service, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"PricePolicy", "title"=>"Գնային Քաղաքականույթուն", "fields"=>$pricePolicy, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Partners", "title"=>"Գործընկերներ", "fields"=>$partners, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Partner", "title"=>"Գործընկեր", "fields"=>$partner, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Contact", "title"=>"Կապ", "fields"=>$contacts, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Message", "title"=>"Հաղորդագրություն", "fields"=>$message, "hasGallery"=>false, "hasSeo"=>false, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Content", "title"=>"Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
 );
 ?>

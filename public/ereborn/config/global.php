@@ -82,7 +82,8 @@
 	$additionalColumnsInWidgets = array(/*"ed_number_1"=>"Թիվ 1"*/);
 
 	$templateChildren = array(
-        "Partners" => ["Partner"]
+        "Partners" => ["Partner"],
+        "Contact" => ["Message"],
 	);
 
 	$templateAdditionalColumns = array(
