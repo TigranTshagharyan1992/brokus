@@ -19,13 +19,15 @@
                                         <div class="form-field form-field_default form-field_md">
                                             <div class="form-field__label">{{GetData::findWord($content, 8)}}</div>
                                             <div class="form-field__target">
-                                                <input type="text" name="name" class="form-field__input" required>
+                                                <label for="name"></label>
+                                                <input type="text" name="name" class="form-field__input" id="name" required>
                                             </div>
                                         </div>
                                         <div class="form-field form-field_default form-field_md">
                                             <div class="form-field__label">{{GetData::findWord($content, 32)}}</div>
                                             <div class="form-field__target">
-                                                <input type="number" name="phone" class="form-field__input" required>
+                                                <label for="number"></label>
+                                                <input type="number" name="phone" class="form-field__input" id="number" required>
                                             </div>
                                         </div>
                                     </div>
@@ -33,7 +35,8 @@
                                         <div class="form-field form-field_default form-field_md">
                                             <div class="form-field__label">{{GetData::findWord($content, 9)}}</div>
                                             <div class="form-field__target">
-                                                <input type="email" name="email" class="form-field__input" required>
+                                                <label for="email"></label>
+                                                <input type="email" name="email" class="form-field__input" id="email" required>
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +44,8 @@
                                         <div class="form-field form-field_default form-field_textarea form-field_md">
                                             <div class="form-field__label">{{GetData::findWord($content, 10)}}</div>
                                             <div class="form-field__target">
-                                                <textarea class="form-field__input" name="message"></textarea>
+                                                <label for="message"></label>
+                                                <textarea class="form-field__input"  id="message" name="message"></textarea>
                                             </div>
                                         </div>
                                     </div>
