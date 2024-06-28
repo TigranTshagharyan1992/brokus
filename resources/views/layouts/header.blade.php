@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="header__logo">
-                        <a href="{{ route('home') }}" class="main-logo">
+                        <a href="{{ route('home', ['lang' => app()->getLocale()]) }}" class="main-logo">
                             <img width="77" height="48" src="{{asset('assets/img/logo.svg')}}" alt="Brokus">
                         </a>
                     </div>
@@ -23,19 +23,19 @@
                             <nav class="header-menu__nav">
                                 <div class="header-menu__link {{$currentRouteName == 'about' ? 'active' : ''}}">
 
-                                    <a href="{{ route('about') }}">{{GetData::findWord($content, 0)}}</a>
+                                    <a href="{{ route('about', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 0)}}</a>
                                 </div>
                                 <div class="header-menu__link {{$currentRouteName == 'services' ? 'active':''}}">
-                                    <a href="{{ route('services') }}">{{GetData::findWord($content, 1)}}</a>
+                                    <a href="{{ route('services', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 1)}}</a>
                                 </div>
                                 <div class="header-menu__link {{$currentRouteName == 'pricePolicy' ? 'active':''}}">
-                                    <a href="{{ route('pricePolicy') }}">{{GetData::findWord($content, 2)}}</a>
+                                    <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 2)}}</a>
                                 </div>
                                 <div class="header-menu__link {{$currentRouteName == 'partners' ? 'active':''}}">
-                                    <a href="{{ route('partners') }}">{{GetData::findWord($content, 3)}}</a>
+                                    <a href="{{ route('partners', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 3)}}</a>
                                 </div>
                                 <div class="header-menu__link {{$currentRouteName == 'contacts' ? 'active':''}}">
-                                    <a href="{{ route('contacts') }}">{{GetData::findWord($content, 4)}}</a>
+                                    <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 4)}}</a>
                                 </div>
                             </nav>
                             <div class="header-menu__footer">

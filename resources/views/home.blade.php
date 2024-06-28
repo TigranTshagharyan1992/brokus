@@ -32,7 +32,7 @@
                 </h1>
                 <div class="hero-block__desc font-20 font-lg-18 font-sm-14">{{$data->entityDataLang->edl_text_1}}</div>
                 <div class="hero-block__btn">
-                    <a href="{{ route('about') }}" class="btn btn_lg color-primary">
+                    <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="btn btn_lg color-primary">
                         <span class="font-sm-14">{{GetData::findWord($content, 0)}}</span>
                         <i class="icon icon-arrow-right"></i>
                     </a>

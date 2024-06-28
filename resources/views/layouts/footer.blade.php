@@ -70,18 +70,18 @@
                 <div class="footer__wrap">
                     <div class="footer__content">
                         <div class="footer__logo">
-                            <a href="{{ route('home') }}" class="main-logo">
+                            <a href="{{ route('home', ['lang' => app()->getLocale()]) }}" class="main-logo">
                                 <img src="{{asset('assets/img/logo-white.svg')}}" alt="Brokus">
                             </a>
                         </div>
                         <div class="footer__nav">
                             <div class="footer__category font-18 font-lg-16 font-sm-14 font-bold">{{GetData::findWord($content, 12)}}</div>
                             <div class="footer__links">
-                                <a href="{{ route('about') }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 0)}}</a>
-                                <a href="{{ route('services') }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 1)}}</a>
-                                <a href="{{ route('pricePolicy') }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 2)}}</a>
-                                <a href="{{ route('partners') }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 3)}}</a>
-                                <a href="{{ route('contacts') }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
+                                <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 0)}}</a>
+                                <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 1)}}</a>
+                                <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 2)}}</a>
+                                <a href="{{ route('partners', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 3)}}</a>
+                                <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
                             </div>
                         </div>
                         <div class="footer__contacts">
