@@ -114,6 +114,11 @@
                     min-width: rem(96 + 40);
                 }
             }
+            @media (min-width: 768px) {
+                .stage-item__text {
+                    width: rem(157);
+                }
+            }
         }
     }
 }
@@ -216,7 +221,7 @@
 
     &__text {
         @include font(500, 14, rem(18), inherit, 0);
-        letter-spacing: -2%;
+        letter-spacing: -0.02em;
     }
 
     &__arrow {

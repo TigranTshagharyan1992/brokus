@@ -60,6 +60,7 @@
     font-size: rem(12);
     font-weight: 500;
     z-index: 1;
+    text-transform: uppercase;
 
     &__current {
         position: relative;
@@ -91,21 +92,19 @@
             border-radius: rem(20);
         }
 
-        // @media (min-width: 768px) {
-            position: absolute;
-            left: 0;
-            top: calc(80%);
-            color: inherit;
-            @include transition(all, 0.3s, ease);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            z-index: z(dropdown);
-            
-            &-body {
-                position: relative;
-            }
-        // }
+        position: absolute;
+        left: 0;
+        top: calc(80%);
+        color: inherit;
+        @include transition(all, 0.3s, ease);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: z(dropdown);
+        
+        &-body {
+            position: relative;
+        }
     }
 
     &__item {
