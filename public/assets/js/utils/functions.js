@@ -21,6 +21,19 @@ function getOnlyNumbers(str) {
     return str.replace(/[^\d]/g, '');
 }
 
+function animateValue(obj, start, end, duration, suffix = '') {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start) + suffix;
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
 function headerFixed() {
     let st = $(this).scrollTop();
 
@@ -46,7 +59,7 @@ function scrollNone() {
     let lockBody = false;
 
     modals.forEach((modal) => {
-        if(modal.classList.contains("active") || header.classList.contains("active")) {
+        if (modal.classList.contains("active") || header.classList.contains("active")) {
             lockBody = true;
         }
     });
@@ -57,20 +70,20 @@ function scrollNone() {
         body.classList.add("locked");
 
         let scrollWidthAfterFreeze = getDocumentVisibleWidth();
-        
-        if(scrollWidthBeforeFreeze < scrollWidthAfterFreeze) {
+
+        if (scrollWidthBeforeFreeze < scrollWidthAfterFreeze) {
             let scrollSpace = scrollWidthAfterFreeze - scrollWidthBeforeFreeze;
 
             body.paddingRight = scrollSpace + "px";
         }
     } else {
         body.classList.remove("locked");
-        body.paddingRight =  '';
+        body.paddingRight = '';
 
-        if(body.getAttribute("style") === "") {
+        if (body.getAttribute("style") === "") {
             body.removeAttribute("style");
         }
-        if(body.getAttribute("class") === "") {
+        if (body.getAttribute("class") === "") {
             body.removeAttribute("class");
         }
     }

@@ -146,6 +146,14 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplayVideos: true
     });
 
+    const numberValueElements = document.querySelectorAll(".numbers-block__value");
+    if(numberValueElements.length) {
+        numberValueElements.forEach((numberValue) => {
+            const end = numberValue.innerHTML.replace("+", '');
+            animateValue(numberValue, 0, +end, 2500, "+");
+        });
+    }
+
     // REMOVE ACTIVE CLASSES *******************************
     document.addEventListener('click', function (e) {
         if(!e.target.closest(".lang-switcher")) {
@@ -181,8 +189,3 @@ document.addEventListener("DOMContentLoaded", function () {
         e.stopPropagation();
     });
 });
-
-// Scroll
-// $(window).scroll(function () {
-//     headerFixed();
-// });
