@@ -123,7 +123,7 @@
                     </div>
                     <div class="activity-block__btn">
                         <div class="btn btn_lg color-primary">
-                            <span class="font-sm-14">{{GetData::findWord($content, 5)}}</span>
+                            <span class="font-sm-14">{{$data->entityDataLang->edl_char_10}}</span>
                             <i class="icon icon-arrow-right"></i>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                     </div>
                     <div class="activity-block__btn">
                         <div class="btn btn_lg color-primary">
-                            <span class="font-sm-14">{{GetData::findWord($content, 5)}}</span>
+                            <span class="font-sm-14">{{$data->entityDataLang->edl_char_10}}</span>
                             <i class="icon icon-arrow-right"></i>
                         </div>
                     </div>
