@@ -106,17 +106,26 @@
         margin-bottom: rem(48);
     }
 
+    @media (min-width: 768px) {
+        & > .row {
+            & > .column:first-child {
+                .stage-block {
+                    &__row:first-child {
+                        .stage-item__text {
+                            width: rem(157);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .column:first-child {
         .stage-block {
             .stage-block__col{
                 &:first-child {
                     padding-left: 0;
                     min-width: rem(96 + 40);
-                }
-            }
-            @media (min-width: 768px) {
-                .stage-item__text {
-                    width: rem(157);
                 }
             }
         }
