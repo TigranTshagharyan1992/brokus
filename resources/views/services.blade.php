@@ -418,7 +418,7 @@
             <div class="cooperate-block__wrap">
                 <div class="cooperate-block__title font-32 font-md-26 font-sm-20">{{$data->entityDataLang->edl_char_6}}</div>
                 <div class="cooperate-block__btn">
-                    <a href="?p=contact#cooperate" class="btn btn_lg btn_primary btn_space_lg">
+                    <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" target="_blank" class="btn btn_lg btn_primary btn_space_lg">
                         <span class="font-sm-14">{{$data->entityDataLang->edl_char_7}}</span>
                         <i class="icon icon-arrow-right"></i>
                     </a>

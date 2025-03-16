@@ -12,6 +12,7 @@
 
 	$custormSortFields = array(
 		0 => "entity_id DESC",
+        CONTACT => "entity_id DESC",
 	);
 
 	$disableAddButtonIn = array(0);
@@ -98,7 +99,7 @@
 	);
 
 	$templateCustormSortFields = array(
-//		"Users" => "entity_creation_date DESC",
+		"Contact" => "entity_creation_date DESC",
 	);
 
 	$templateDisableSubsectionsIn = array();
