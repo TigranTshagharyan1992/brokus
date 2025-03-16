@@ -90,36 +90,141 @@
 
 <div class="team">
     <div class="row">
+        <div class="column sm-12">
+            <div class="team__heading">
+                <h2 class="team__title h2-font text-center">Մեր թիմը</h2>
+                <div class="team__desc font-20 font-lg-16 font-sm-14 text-center">
+                    Մեր կազմակերպությունն ունի 30-ից ավել բարձր որակավորում ունեցող մասնագետներ
+                </div>
+            </div>
+            <div class="team__list">
+                <div class="row">
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column sm-12 md-6 lg-4 xl-3">
+                        <div class="team-item">
+                            <div class="team-item__img">
+                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                            </div>
+                            <div class="team-item__body">
+                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="work">
+    <div class="row">
         <div class="column sm-12 md-4 xl-3 xl-offset-1 flex align-middle">
-            <div class="team__body">
-                <h2 class="team__title h2-font title-space_sm">{{$data->entityDataLang->edl_char_5}}</h2>
-                <div class="team__desc font-20 font-lg-16 font-sm-14">{{$data->entityDataLang->edl_text_2}}</div>
+            <div class="work__body">
+                <h2 class="work__title h2-font title-space_sm">{{$data->entityDataLang->edl_char_5}}</h2>
+                <div class="work__desc font-20 font-lg-16 font-sm-14">{{$data->entityDataLang->edl_text_2}}</div>
             </div>
         </div>
         <div class="column sm-12 md-8 xl-7">
-            <div class="team__slider">
-                <div class="team-slider">
-                    <div class="team-slider__wrap">
+            <div class="work__slider">
+                <div class="work-slider">
+                    <div class="work-slider__wrap">
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 @foreach($data->entityGallery as $gallery)
-                                    <a href="{{asset(\App\Helpers\Helper::image($gallery['eg_path']))}}" class="team-slider__slide swiper-slide glightbox" data-gallery="team">
+                                    <a href="{{asset(\App\Helpers\Helper::image($gallery['eg_path']))}}" class="work-slider__slide swiper-slide glightbox" data-gallery="team">
                                         <img src="{{asset(\App\Helpers\Helper::image($gallery['eg_path']))}}" alt="team">
                                     </a>
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="team-slider__controls">
-                        <div class="team-slider__arrows slider-arrows">
-                            <div class="slider-arrow team-slider__arrow team-slider__arrow_prev">
+                    <div class="work-slider__controls">
+                        <div class="work-slider__arrows slider-arrows">
+                            <div class="slider-arrow work-slider__arrow work-slider__arrow_prev">
                                 <i class="icon icon-arrow-left-round"></i>
                             </div>
-                            <div class="slider-arrow team-slider__arrow team-slider__arrow_next">
+                            <div class="slider-arrow work-slider__arrow work-slider__arrow_next">
                                 <i class="icon icon-arrow-right-round"></i>
                             </div>
                         </div>
-                        <div class="team-slider__dots"></div>
+                        <div class="work-slider__dots"></div>
                     </div>
                 </div>
             </div>

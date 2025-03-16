@@ -103,18 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const teamSliderElement = document.querySelector(".team-slider");
-    if(teamSliderElement) {
-        const teamSlider = new Swiper(".team-slider .swiper", {
+    const workSliderElement = document.querySelector(".work-slider");
+    if(workSliderElement) {
+        const workSlider = new Swiper(".work-slider .swiper", {
             slidesPerView: 1,
             loop: true,
             navigation: {
-                nextEl: '.team-slider__arrow_next',
-                prevEl: '.team-slider__arrow_prev',
+                nextEl: '.work-slider__arrow_next',
+                prevEl: '.work-slider__arrow_prev',
             },
             simulateTouch: false,
             pagination: {
-                el: ".team-slider__dots",
+                el: ".work-slider__dots",
                 clickable: true,
             }
         });

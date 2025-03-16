@@ -23,6 +23,58 @@
 }
 
 .team {
+    margin-bottom: rem(105);
+
+    &__heading {
+        max-width: rem(600);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        margin-bottom: rem(8);
+        color: map-get($color-scheme, 'min-dark');
+    }
+
+    &__desc {
+        font-style: italic;
+        line-height: 200%;
+        color: rgba($color: map-get($color-scheme, 'main-dark'), $alpha: 0.7);
+    }
+
+    &__list {
+        .team-item {
+            margin-top: rem(40);
+        }
+    }
+}
+
+.team-item {
+    &__img {
+        border-radius: rem(22);
+        overflow: hidden;
+        margin-bottom: rem(16);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__position {
+        @include font(500, 14, 114%, #9E9E9E, uppercase);
+        @include font-media($media-md, rem(13), 0);
+        @include font-media($media-sm, rem(12), 0);
+        margin-bottom: rem(4);
+    }
+
+    &__name {
+        @include font(700, 24, 116.6%, inherit, 0);
+        @include font-media($media-md, rem(22), 0);
+        @include font-media($media-sm, rem(20), 0);
+    }
+}
+
+.work {
     padding-bottom: rem(144);
     position: relative;
 
@@ -42,11 +94,11 @@
     &__desc {
         font-style: italic;
         line-height: rem(32);
-        column-rule: map-get($color-scheme, 'main-dark');
+        color: rgba($color: map-get($color-scheme, 'main-dark'), $alpha: 0.7);
     }
 }
 
-.team-slider {
+.work-slider {
     &__wrap {
         background: #fff;
         border: rem(1) solid #E1E1E1;
@@ -100,7 +152,7 @@
         }
     }
 
-    .team {
+    .work {
         &::after {
             width: 85%;
         }
@@ -118,12 +170,20 @@
     }
 
     .team {
+        &__list {
+            .team-item {
+                margin-top: rem(32);
+            }
+        }
+    }
+
+    .work {
         &::after {
             top: rem(56);
         }
     }
 
-    .team-slider {
+    .work-slider {
         &__wrap {
             border-radius: rem(24);
             padding: rem(20);
@@ -181,6 +241,26 @@
     }
 
     .team {
+        margin-bottom: rem(64);
+        
+        &__desc {
+            line-height: 150%;
+        }
+
+        &__list {
+            .team-item {
+                margin-top: rem(24);
+            }
+        }
+    }
+
+    .team-item {
+        &__img {
+            border-radius: rem(16);
+        }
+    }
+
+    .work {
         padding-bottom: rem(64);
     
         &::after {
@@ -199,7 +279,7 @@
         }
     }
     
-    .team-slider {
+    .work-slider {
         &__wrap {
             border-radius: rem(12);
             padding: rem(10);
