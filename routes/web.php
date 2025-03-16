@@ -24,7 +24,7 @@ Route::group(['middleware'=> ['locale'], 'prefix'=>'{lang?}'], function() {
     Route::get('/blog', Controllers\BlogController::class)->name('blog');
     Route::get('/blog-inner', Controllers\BlogInnerController::class)->name('blogInner');
     Route::get('/faq', Controllers\FaqController::class)->name('faq');
-    Route::get('/privacy-policy', Controllers\PricePolicyController::class)->name('pricePolicy');
+    Route::get('/privacy-policy', Controllers\PrivacyPolicyController::class)->name('pricePolicy');
     Route::post('/send-mail', Controllers\ContactController::class)->name('contact');
 });
 
