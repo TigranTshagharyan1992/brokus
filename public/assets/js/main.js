@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // headerFixed();
+    accordionInit();
 
     const burgerElement = document.querySelector(".burger");
     const headerMenuElement = document.querySelector(".header-menu");

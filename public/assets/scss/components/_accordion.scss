@@ -1,0 +1,96 @@
+.accordion {
+    &__item {
+        margin-top: rem(16);
+        border-radius: rem(16);
+        overflow: hidden;
+        // padding-bottom: rem(8);
+        background-color: #F5F5F5;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.open {
+            border: rem(1.5) solid #F5F5F5;
+            background-color: transparent;
+
+            .accordion {
+                &__header {
+                    background-color: transparent;
+                    padding-bottom: rem(16);
+                }
+                
+                &__arrow {
+                    background-image: url("../../img/minus-circle.svg");
+                }
+            }
+        }
+    }
+
+    &__header {
+        padding: rem(24);
+        position: relative;
+        @extend %user-cursor;
+        @extend %flex;
+        @extend %align-between;
+        @include transition(padding-bottom,0.3s,ease);
+    }
+
+    &__title {
+        color: map-get($color-scheme, 'main-dark');
+        margin-right: rem(16);
+    }
+
+    &__arrow {
+        margin-top: rem(4);
+        @include flex(0, 0, auto);
+        width: rem(24);
+        height: rem(24);
+        @include background('../../img/plus-circle.svg', center, contain, no-repeat, transparent);
+    }
+
+    &__body {
+        div {
+            // margin-top: rem(-8);
+            line-height: 150%;
+            padding: rem(16) rem(24) rem(16);
+            @include horizontal-decor('../../img/decor/horizontal-blue-300.svg');
+
+            &::after {
+                top: 0;
+                left: rem(24);
+                width: calc(100% - rem(48));
+            }
+        }
+    }
+}
+
+@media (max-width: $media-sm) {
+    .accordion {
+        &__item {
+            border-radius: rem(8);
+        }
+    
+        &__header {
+            padding: rem(16);
+        }
+    
+        &__arrow {
+            margin-top: 0;
+            width: rem(20);
+            height: rem(20);
+        }
+    
+        &__body {
+            div {
+                margin-top: 0;
+                padding: rem(16) rem(16) rem(8);
+    
+                &::after {
+                    left: rem(16);
+                    width: calc(100% - rem(32));
+                }
+            }
+        }
+    }
+}

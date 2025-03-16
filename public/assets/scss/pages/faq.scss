@@ -1,0 +1,18 @@
+@import "../utils/_module";
+@import "../components/_accordion";
+
+.faq {
+    margin-bottom: rem(328);
+}
+
+@media (max-width: $media-md) {
+    .faq {
+        margin-bottom: rem(160);
+    }   
+}
+
+@media (max-width: $media-sm) {
+    .faq {
+        margin-bottom: rem(96);
+    }   
+}
