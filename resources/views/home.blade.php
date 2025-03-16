@@ -80,19 +80,19 @@
             <div class="column sm-12 flex align-center">
                 <div class="numbers-block__wrap">
                     <div class="numbers-block__item">
-                        <div class="numbers-block__value font-64 font-lg-56 font-sm-40">{{$data->entityData->ed_char_1}}</div>
+                        <div class="numbers-block__value font-64 font-lg-56 font-sm-32">{{$data->entityData->ed_char_1}}</div>
                         <div class="numbers-block__name font-lg-14 font-sm-12">{{$data->entityDataLang->edl_char_1}}</div>
                     </div>
                     <div class="numbers-block__item">
-                        <div class="numbers-block__value font-64 font-lg-56 font-sm-40">{{$data->entityData->ed_char_2}}</div>
+                        <div class="numbers-block__value font-64 font-lg-56 font-sm-32">{{$data->entityData->ed_char_2}}</div>
                         <div class="numbers-block__name font-lg-14 font-sm-12">{{$data->entityDataLang->edl_char_2}}</div>
                     </div>
                     <div class="numbers-block__item">
-                        <div class="numbers-block__value font-64 font-lg-56 font-sm-40">{{$data->entityData->ed_char_3}}</div>
+                        <div class="numbers-block__value font-64 font-lg-56 font-sm-32">{{$data->entityData->ed_char_3}}</div>
                         <div class="numbers-block__name font-lg-14 font-sm-12">{{$data->entityDataLang->edl_char_3}}</div>
                     </div>
                     <div class="numbers-block__item">
-                        <div class="numbers-block__value font-64 font-lg-56 font-sm-40">{{$data->entityData->ed_char_4}}</div>
+                        <div class="numbers-block__value font-64 font-lg-56 font-sm-32">{{$data->entityData->ed_char_4}}</div>
                         <div class="numbers-block__name font-lg-14 font-sm-12">{{$data->entityDataLang->edl_char_4}}</div>
                     </div>
                 </div>
@@ -153,6 +153,32 @@
                     </div>
                 </div>
             </a>
+        </div>
+    </div>
+</div>
+
+<div class="home-contact">
+    <div class="row">
+        <div class="column sm-12">
+            <div class="home-contact__wrap">
+                <div class="row">
+                    <div class="column sm-12 lg-5 lg-order-2 relative">
+                        <div class="home-contact__image">
+                            <img width="500" height="368" src="{{asset('assets/img/container.png')}}" alt="container">
+                        </div>
+                    </div>
+                    <div class="column sm-12 lg-7 lg-order-1">
+                        <div class="home-contact__body">
+                            <div class="home-contact__title">ԱՆՎՃԱՐ ԽՈՐՀՐԴԱՏՎՈՒԹՅՈՒՆ</div>
+                            <div class="home-contact__desc font-20 font-lg-18 font-sm-14">Գրեք մեզ ցանկացած հարցով, մեր մասնագետները սիրով կօգնեն ձեզ</div>
+                            <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="btn btn_lg btn_space_lg btn_primary">
+                                <span class="font-sm-14">ուղարկել հաղորդագրություն</span>
+                                <i class="icon icon-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

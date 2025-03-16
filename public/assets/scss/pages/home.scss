@@ -225,6 +225,55 @@
     }
 }
 
+.home-contact {
+    margin-bottom: rem(105);
+    color: #fff;
+
+    &__wrap {
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: map-get($color-scheme, 'main-dark');
+            border-radius: rem(24);
+            z-index: -1;
+        }
+    }
+
+    &__body {
+        padding: rem(56);
+    }
+
+    &__title {
+        margin-bottom: rem(8);
+        @include font(900, 40, rem(72), inherit, 0);
+        @include font-media($media-lg, rem(28), rem(28));
+        @include font-media($media-sm, rem(20), rem(25));
+    }
+
+    &__desc {
+        margin-bottom: rem(40);
+        line-height: 150%;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: rem(76);
+        padding-bottom: rem(72);
+
+        img {
+            width: rem(500);
+        }
+    }
+}
+
 .partners {
     margin-bottom: rem(109);
 
@@ -401,6 +450,28 @@
         }
     }
 
+    .home-contact {
+        &__body {
+            padding: rem(40);
+        }
+    
+        &__desc {
+            margin-bottom: rem(32);
+        }
+    
+        &__image {
+            position: static;
+            padding-right: 0;
+            padding-bottom: 0;
+            text-align: center;
+            margin-top: rem(-56);
+    
+            img {
+                width: rem(380);
+            }
+        }
+    }
+
     .partners {
         margin-bottom: rem(64);
     }
@@ -453,6 +524,25 @@
         &__desc {
             margin-bottom: rem(8);
             line-height: rem(16);
+        }
+    }
+
+    .home-contact {
+        &__body {
+            padding: rem(24);
+        }
+    
+        &__desc {
+            margin-bottom: rem(24);
+        }
+    
+        &__image {
+            margin-top: rem(-32);
+            padding: 0 rem(16);
+    
+            img {
+                width: rem(280);
+            }
         }
     }
 }
