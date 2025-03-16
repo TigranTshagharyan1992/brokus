@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/top.css')}}">
+
 <div class="not-found">
     <div class="row">
         <div class="column sm-12">

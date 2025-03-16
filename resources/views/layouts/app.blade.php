@@ -37,6 +37,9 @@
 
     <link rel="preload" as="style" href="{{asset('assets/css/top.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/top.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/libs.css.php')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bottom.css')}}" />
 
     @yield('styles')
 
@@ -47,10 +50,6 @@
             @yield('content')
         </main>
     @include('layouts.footer')
-
-    <link rel="stylesheet" href="{{asset('assets/css/libs.css.php')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/bottom.css')}}" />
 
     @yield('startScripts')
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

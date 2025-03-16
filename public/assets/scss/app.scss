@@ -283,3 +283,15 @@
     border-radius: rem(24);
     overflow: hidden;
 }
+
+.rich-text {
+    a {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+
+    * {
+        font-family: inherit !important;
+        line-height: inherit!important;
+    }
+}

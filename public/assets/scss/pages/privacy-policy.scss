@@ -1,0 +1,42 @@
+@import "../utils/_module";
+@import "../components/_accordion";
+
+.privacy-policy {
+    margin-bottom: rem(130);
+
+    &__title {
+        color: map-get($color-scheme, 'main-dark');
+    }
+
+    &__heading {
+        padding: rem(80) 0;
+        background-color: rgba(221, 221, 221, .3);
+        border-radius: 0 0 rem(88) rem(88);
+        margin-bottom: rem(40);
+    }
+
+    &__content {
+        line-height: 175%;
+        color: $color-secondary;
+    }
+}
+
+@media (max-width: $media-md) {
+    .privacy-policy {
+        &__heading {
+            padding: rem(48) 0;
+            border-radius: 0 0 rem(64) rem(64);
+        }
+    }
+}
+
+@media (max-width: $media-sm) {
+    .privacy-policy {
+        margin-bottom: rem(64);
+
+        &__heading {
+            padding: rem(32) 0;
+            border-radius: 0 0 rem(32) rem(32);
+        }
+    }   
+}
