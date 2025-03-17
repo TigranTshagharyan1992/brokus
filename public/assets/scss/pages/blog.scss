@@ -1,0 +1,118 @@
+@import "../utils/_module";
+
+.blog-heading {
+    margin-bottom: rem(80);
+    position: relative;
+    background: linear-gradient(90deg, #FBFBFB 28.31%, rgba(245, 249, 250, 0) 66.25%);
+
+    &__body {
+        position: relative;
+        padding: rem(96) 0;
+        color: map-get($color-scheme, 'main-dark');
+        z-index: 1;
+    }
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__desc {
+        line-height: 160%;
+        font-style: italic;
+        color: rgba($color: map-get($color-scheme, 'main-dark'), $alpha: 0.7);
+    }
+
+    &__preview {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        img {
+            mix-blend-mode: color-burn;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+.blog-listing {
+    margin-bottom: rem(448);
+
+    .blog-card {
+        margin-bottom: rem(40);
+    }
+}
+
+.blog-card {
+
+    &__preview {
+        border-radius: rem(20) rem(20) rem(20) 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        padding: rem(8) rem(12) rem(8) 0;
+        border-top-right-radius: rem(16);
+        @include font(500, 12, rem(14), rgba($color: map-get($color-scheme, 'main-dark'), $alpha: 0.7), uppercase);
+        @extend %flex;
+        @extend %align-middle;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: rem(20);
+            height: rem(20);
+            @include background('../../img/decor/blog-round-lg.svg', center, contain, no-repeat, transparent);
+        }
+    }
+
+    &__info-item {
+        @extend %flex;
+        @extend %align-middle;
+        padding-right: rem(10);
+        margin-right: rem(10);
+        position: relative;
+
+        &::after {
+            content: "";
+            @include center-absolute(vertical);
+            right: rem(-2);
+            width: rem(4);
+            height: rem(4);
+            border-radius: rem(4);
+            background-color: #E1E1E1;
+        }
+
+        .icon {
+            font-size: rem(16);
+            margin-right: rem(4);
+        }
+
+        &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__body {
+        padding-top: rem(16);
+    }
+
+    &__title {
+        @include font(bold, 22, 145%, $color-secondary, 0);
+        @include font-media($media-md, rem(20), 0);
+        @include font-media($media-sm, rem(18), 0);
+    }
+}
