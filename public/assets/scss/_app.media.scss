@@ -227,4 +227,11 @@
     .gslide-media.gslide-image {
         border-radius: rem(16);
     }
+
+    .info-pair {
+        &__item {
+            padding-right: rem(8);
+            margin-right: rem(8);
+        }
+    }
 }

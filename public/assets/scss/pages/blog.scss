@@ -1,4 +1,5 @@
 @import "../utils/_module";
+@import "../components/_blog-card";
 
 .blog-heading {
     margin-bottom: rem(80);
@@ -32,6 +33,7 @@
             mix-blend-mode: color-burn;
             width: auto;
             height: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -44,75 +46,44 @@
     }
 }
 
-.blog-card {
-
-    &__preview {
-        border-radius: rem(20) rem(20) rem(20) 0;
-        overflow: hidden;
-        position: relative;
-    }
-
-    &__info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        padding: rem(8) rem(12) rem(8) 0;
-        border-top-right-radius: rem(16);
-        @include font(500, 12, rem(14), rgba($color: map-get($color-scheme, 'main-dark'), $alpha: 0.7), uppercase);
-        @extend %flex;
-        @extend %align-middle;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            width: rem(20);
-            height: rem(20);
-            @include background('../../img/decor/blog-round-lg.svg', center, contain, no-repeat, transparent);
+@media (max-width: $media-md) {
+    .blog-heading {
+        margin-bottom: rem(80);
+    
+        &__body {
+            padding: rem(48) 0;
         }
     }
 
-    &__info-item {
-        @extend %flex;
-        @extend %align-middle;
-        padding-right: rem(10);
-        margin-right: rem(10);
-        position: relative;
+    .blog-listing {
+        margin-bottom: rem(120);
+    
+        .blog-card {
+            margin-bottom: rem(32);
+        }
+    }
+}
 
-        &::after {
-            content: "";
-            @include center-absolute(vertical);
-            right: rem(-2);
-            width: rem(4);
-            height: rem(4);
-            border-radius: rem(4);
-            background-color: #E1E1E1;
+@media (max-width: $media-sm) {
+    .blog-heading {
+        margin-bottom: rem(32);
+
+        &__body {
+            padding: rem(24) 0;
         }
 
-        .icon {
-            font-size: rem(16);
-            margin-right: rem(4);
-        }
-
-        &:last-child {
-            padding-right: 0;
-            margin-right: 0;
-
-            &::after {
-                display: none;
-            }
+        &__preview {
+            position: static;
+            margin-left: rem(-16);
+            margin-right: rem(-16);
         }
     }
 
-    &__body {
-        padding-top: rem(16);
-    }
-
-    &__title {
-        @include font(bold, 22, 145%, $color-secondary, 0);
-        @include font-media($media-md, rem(20), 0);
-        @include font-media($media-sm, rem(18), 0);
+    .blog-listing {
+        margin-bottom: rem(64);
+    
+        .blog-card {
+            margin-bottom: rem(24);
+        }
     }
 }

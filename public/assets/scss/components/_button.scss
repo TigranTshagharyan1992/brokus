@@ -48,6 +48,13 @@
         }
     }
 
+    &_gray {
+        &-border {
+            border: rem(1) solid #A0A0A0;
+            color: #A0A0A0;
+        }
+    }
+
     // sizes ***************************
     &_sm {
         height: rem($buttonSizeSm);
