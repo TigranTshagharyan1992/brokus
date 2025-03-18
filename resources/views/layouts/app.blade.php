@@ -52,6 +52,7 @@
     @include('layouts.footer')
 
     @yield('startScripts')
+        <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=60e460c3a66c4c001227a50e&product=inline-share-buttons"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script defer src="{{asset('assets/js/libs.js.php')}}"></script>
         <script defer src="{{asset('assets/js/utils/functions.js')}}"></script>

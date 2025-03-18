@@ -18,7 +18,7 @@
                     </a>
                     <div class="blog-inner__heading">
                         <div class="blog-inner__category font-bold font-14 font-sm-12">Բլոգ</div>
-                        <h1 class="blog-inner__title font-black font-32 font-md-26 font-sm-22">
+                        <h1 class="blog-inner__title font-black font-32 font-md-26 font-sm-18">
                             Ճշգրտվել է ապրանքների ցանկը, որոնց համար մաքսային հայտարարագրման ժամանակ
                             կարող են խնդիրներ լինել
                         </h1>
@@ -109,7 +109,7 @@
                         Ապրանքները մաքսային համակարգում հաճախ դասակարգվում են հատուկ ծածկագրերի՝ HS (Harmonized System) կոդերով,
                         որոնք նշում են ապրանքի տեսակն ու բնույթը։ Երբ ապրանքի դասակարգման ընթացքում կատարվում են սխալներ։
                     </div>
-                    <div class="widget video-widget">
+                    <div class="widget text-widget video-widget">
                         <div class="video-widget__preview">
                             <div class="video-widget__btn">
                                 <img width="64" height="64" src="{{asset('assets/img/play.svg')}}" alt="play">
@@ -130,19 +130,19 @@
                         <div class="social-widget__title">կիսվել այս հոդվածով</div>
                         <div class="social-widget__icons">
                             <div class="social-widget__icons-wrap">
-                                <a href="" class="btn btn_gray-border btn_badge btn_lg">
+                                <div class="btn btn_gray-border btn_badge btn_lg st-custom-button cursor" data-network="facebook" data-title="#" data-url="">
                                     <i class="icon icon-facebook"></i>
-                                </a>
-                                <a href="" class="btn btn_gray-border btn_badge btn_lg">
+                                </div>
+                                <div class="btn btn_gray-border btn_badge btn_lg st-custom-button cursor" data-network="linkedin" data-title="#" data-url="">
                                     <i class="icon icon-linkedin"></i>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="column sm-12 lg-4">
+        <div class="column sm-12 lg-5 xl-4">
             <div class="suggested-blogs">
                 <div class="suggested-blogs__title">կարող է հետաքրքիր լինել</div>
                 <div class="suggested-blogs__list">

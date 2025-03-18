@@ -154,6 +154,15 @@
         @media (max-width: $media-sm) {
             height: rem(40);
 
+            &.btn_badge {
+                width: rem(40);
+
+                & > img,& > svg, & > .icon {
+                    width: rem(16);
+                    font-size: rem(16);
+                }
+            }
+
             & > img,& > svg, & > .icon {
                 &:first-child {
                     margin-right: rem(4);

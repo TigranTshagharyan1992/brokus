@@ -101,6 +101,17 @@
                 font-size: rem(20);
             }
         }
+
+        &_md {
+            .info-pair {
+                &__item {
+                    .icon {
+                        font-size: rem(20);
+                        margin-right: rem(6);
+                    }
+                }
+            }
+        }
     }
 
     .partners {

@@ -336,8 +336,8 @@
 
     &_md {
         font-size: rem(16);
-        line-height: rem(24);
-        @include font-media($media-sm, rem(14), 0);
+        line-height: rem(23);
+        @include font-media($media-sm, rem(14), rem(21));
 
         .info-pair {
             &__item {
