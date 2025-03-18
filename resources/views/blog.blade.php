@@ -35,12 +35,12 @@
                 <div class="blog-card__preview">
                     <img width="516" height="296" src="{{asset('assets/img/content/blog-card.jpg')}}" alt="Blog">
 
-                    <div class="blog-card__info">
-                        <div class="blog-card__info-item">
+                    <div class="blog-card__info info-pair">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
                         </div>
-                        <div class="blog-card__info-item">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-clock"></i>
                             <span>6 րոպե</span>
                         </div>
@@ -81,12 +81,12 @@
                 <div class="blog-card__preview">
                     <img width="516" height="296" src="{{asset('assets/img/content/blog-card.jpg')}}" alt="Blog">
 
-                    <div class="blog-card__info">
-                        <div class="blog-card__info-item">
+                    <div class="blog-card__info info-pair">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
                         </div>
-                        <div class="blog-card__info-item">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-clock"></i>
                             <span>6 րոպե</span>
                         </div>
@@ -104,12 +104,12 @@
                 <div class="blog-card__preview">
                     <img width="516" height="296" src="{{asset('assets/img/content/blog-card.jpg')}}" alt="Blog">
 
-                    <div class="blog-card__info">
-                        <div class="blog-card__info-item">
+                    <div class="blog-card__info info-pair">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
                         </div>
-                        <div class="blog-card__info-item">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-clock"></i>
                             <span>6 րոպե</span>
                         </div>
@@ -127,12 +127,12 @@
                 <div class="blog-card__preview">
                     <img width="516" height="296" src="{{asset('assets/img/content/blog-card.jpg')}}" alt="Blog">
 
-                    <div class="blog-card__info">
-                        <div class="blog-card__info-item">
+                    <div class="blog-card__info info-pair">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
                         </div>
-                        <div class="blog-card__info-item">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-clock"></i>
                             <span>6 րոպե</span>
                         </div>
@@ -150,12 +150,12 @@
                 <div class="blog-card__preview">
                     <img width="516" height="296" src="{{asset('assets/img/content/blog-card.jpg')}}" alt="Blog">
 
-                    <div class="blog-card__info">
-                        <div class="blog-card__info-item">
+                    <div class="blog-card__info info-pair">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
                         </div>
-                        <div class="blog-card__info-item">
+                        <div class="blog-card__info-item info-pair__item">
                             <i class="icon icon-clock"></i>
                             <span>6 րոպե</span>
                         </div>

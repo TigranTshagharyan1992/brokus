@@ -1,2 +1,200 @@
 @import "../utils/_module";
 @import "../components/_blog-card";
+
+.blog-inner {
+    margin-bottom: rem(116);
+    position: relative;
+    padding-top: rem(32);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: rem(344);
+        background-color: rgba(221, 221, 221, 0.3);
+        border-radius: 0 0 rem(88) rem(88);
+        z-index: -1;
+    }
+
+    &__header {
+        margin-bottom: rem(40);
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: rem(16);
+        left: rem(-84);
+        @include flex(0, 0, auto);
+        width: rem(56);
+        height: rem(56);
+        border-radius: 50%;
+        border: rem(2) solid #E1E1E1;
+        @extend %flex;
+        @extend %align-middle;
+        @extend %align-center;
+    }
+
+    &__category {
+        color: #747474;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+
+    &__title {
+        line-height: 150%;
+    }
+
+    &__img {
+        border-radius: rem(20);
+        margin-bottom: rem(16);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        margin-bottom: rem(16);
+    }
+}
+
+.widgets {
+    color: $color-secondary;
+
+    .widget {
+        margin-bottom: rem(32);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.text-widget {
+    line-height: 175%;
+    @include font-media($media-sm, rem(14), 0);
+}
+
+.important-widget {
+    @include font(700, 20, 160%, inherit, 0);
+    @include font-media($media-md, rem(18), 0);
+    @include font-media($media-sm, rem(16), 0);
+    padding-left: rem(22);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem(6);
+        bottom: 0;
+        background-color: $color-primary;
+    }
+}
+
+.image-widget {
+    &::after {
+        clear: both; 
+        content: "";
+        display: table; 
+    }
+
+    img {
+        border-radius: rem(16);
+    }
+
+    &_left {
+        img {
+            float: left;
+            margin: 0 rem(24) rem(16) 0;
+        }
+    }
+
+    &_right {
+        img {
+            margin: 0 0 rem(16) rem(24);
+            float: right;
+        }
+    }
+}
+
+.video-widget {
+    &__preview {
+        border-radius: rem(20);
+        overflow: hidden;
+        position: relative;
+        margin-bottom: rem(16);
+    }
+
+    &__btn {
+        @include center-absolute(both);
+        border-radius: 50%;
+        overflow: hidden;
+        background: rgba(41, 41, 41, 0.5);
+        backdrop-filter: blur(8px);
+    }
+
+    &__title {
+        margin-bottom: rem(16);
+        @include font(600, 20, 150%, inherit, 0);
+    }
+
+    &__text {
+        line-height: 130%;
+    }
+}
+
+.social-widget {
+    text-align: center;
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__icons {
+        @include horizontal-decor('../../img/decor/horizontal-blue-300.svg');
+
+        &::after {
+            z-index: -1;
+            top: calc(50% - rem(1));
+        }
+    }
+
+    &__icons-wrap {
+        padding: 0 rem(16);
+        background-color: #fff;
+        @extend %flex;
+        @extend %align-middle;
+
+        .btn {
+            margin-right: rem(16);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.suggested-blogs {
+    padding-top: rem(40);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__list {
+        .blog-card {
+            margin-bottom: rem(24);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

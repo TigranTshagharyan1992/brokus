@@ -13,12 +13,12 @@
         <div class="column sm-12 lg-7">
             <div class="blog-inner__main">
                 <div class="blog-inner__header">
-                    <div class="blog-inner__arrow">
-                        <i class="icon icon-arrow-left"></i>
-                    </div>
+                    <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="blog-inner__arrow">
+                        <img width="32" height="32" src="{{asset('assets/img/arrow-left.svg')}}" alt="arrow left">
+                    </a>
                     <div class="blog-inner__heading">
-                        <div class="blog-inner__category font-bold text-14 text-sm-12">Բլոգ</div>
-                        <h1 class="blog-inner__title font-black text-32 text-md-26 text-sm-22">
+                        <div class="blog-inner__category font-bold font-14 font-sm-12">Բլոգ</div>
+                        <h1 class="blog-inner__title font-black font-32 font-md-26 font-sm-22">
                             Ճշգրտվել է ապրանքների ցանկը, որոնց համար մաքսային հայտարարագրման ժամանակ
                             կարող են խնդիրներ լինել
                         </h1>
@@ -28,7 +28,7 @@
                     <img width="929" height="528" src="{{asset('assets/img/content/blog.jpg')}}" alt="Blog">
                 </div>
                 <div class="blog-inner__info">
-                    <div class="info-pair">
+                    <div class="info-pair info-pair_md">
                         <div class="info-pair__item">
                             <i class="icon icon-date"></i>
                             <span>Փետրվար 16 2025</span>
@@ -84,7 +84,7 @@
                         չէ կամ սխալ է, դա կարող է հանգեցնել այնպիսի խնդիրների, ինչպիսիք են՝ մաքսային արտոնությունների կորուստը
                         կամ ապրանքի բեռի կասկածելիություն։
                     </div>
-                    <div class="widget image-widget image-widget_left">
+                    <div class="widget text-widget image-widget image-widget_left">
                         <img width="304" height="192" src="{{asset('assets/img/content/widget.jpg')}}" alt="Widget">
                         Մաքսային հայտարարագրերում չափազանց կարևոր է նշել ապրանքի ծագման երկիրը, քանի որ այն կարող է
                         ազդել մաքսային վճարների և պարտավորությունների վրա։ Եթե ապրանքի ծագման երկիրը մաքսային
@@ -100,7 +100,7 @@
                         համապատասխանություն։ Սակայն որոշ ապրանքներ կարող են բախվել խնդիրների՝ մաքսային հայտարարագրում,
                         ինչը կարող է առաջացնել մի շարք խոչընդոտներ ինչպես ներմուծողների, այնպես էլ մաքսային մարմինների համար։
                     </div>
-                    <div class="widget image-widget image-widget_right">
+                    <div class="widget text-widget image-widget image-widget_right">
                         <img width="304" height="192" src="{{asset('assets/img/content/widget.jpg')}}" alt="Widget">
                         Մաքսային հայտարարագրերում չափազանց կարևոր է նշել ապրանքի ծագման երկիրը, քանի որ այն կարող է
                         ազդել մաքսային վճարների և պարտավորությունների վրա։ Եթե ապրանքի ծագման երկիրը մաքսային
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="widget social-widget">
-                        <div class="social-widget__tittle">կիսվել այս հոդվածով</div>
+                        <div class="social-widget__title">կիսվել այս հոդվածով</div>
                         <div class="social-widget__icons">
                             <div class="social-widget__icons-wrap">
                                 <a href="" class="btn btn_gray-border btn_badge btn_lg">
