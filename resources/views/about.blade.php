@@ -88,7 +88,7 @@
     </div>
 </div>
 
-<div class="team">
+<div class="team" id="team">
     <div class="row">
         <div class="column sm-12">
             <div class="team__heading">

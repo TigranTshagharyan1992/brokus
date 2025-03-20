@@ -103,6 +103,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    const teamSliderElement = document.querySelector(".team-slider");
+    if(teamSliderElement) {
+        const teamSlider = new Swiper(".team-slider .swiper", {
+            slidesPerView: "auto",
+            loop: true,
+            // spaceBetween: 32,
+            // loopAdditionalSlides: 5,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.team-slider__arrow_next',
+                prevEl: '.team-slider__arrow_prev',
+            },
+            simulateTouch: false,
+            pagination: false,
+            on: {
+                init: function (swiper) {
+                //   swiper.slideTo(4);
+                },
+            },
+        });
+    }
+
     const workSliderElement = document.querySelector(".work-slider");
     if(workSliderElement) {
         const workSlider = new Swiper(".work-slider .swiper", {

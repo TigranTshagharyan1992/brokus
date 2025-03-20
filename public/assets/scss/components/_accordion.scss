@@ -3,7 +3,6 @@
         margin-top: rem(16);
         border-radius: rem(16);
         overflow: hidden;
-        // padding-bottom: rem(8);
         background-color: #F5F5F5;
 
         &:first-child {
@@ -17,7 +16,6 @@
             .accordion {
                 &__header {
                     background-color: transparent;
-                    padding-bottom: rem(16);
                 }
                 
                 &__arrow {
@@ -51,7 +49,6 @@
 
     &__body {
         div {
-            // margin-top: rem(-8);
             line-height: 150%;
             padding: rem(16) rem(24) rem(16);
             @include horizontal-decor('../../img/decor/horizontal-blue-300.svg');

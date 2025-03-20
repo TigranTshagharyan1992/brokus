@@ -110,12 +110,12 @@
                         որոնք նշում են ապրանքի տեսակն ու բնույթը։ Երբ ապրանքի դասակարգման ընթացքում կատարվում են սխալներ։
                     </div>
                     <div class="widget text-widget video-widget">
-                        <div class="video-widget__preview">
+                        <a href="https://www.youtube.com/embed/alBuSbDUSig?si=lqwVTz7Pg0wt3PTd" class="video-widget__preview glightbox" data-gallery="gallery1">
                             <div class="video-widget__btn">
                                 <img width="64" height="64" src="{{asset('assets/img/play.svg')}}" alt="play">
                             </div>
                             <img width="929" height="528" src="{{asset('assets/img/content/blog.jpg')}}" alt="video">
-                        </div>
+                        </a>
                         <div class="video-widget__title">Ապրանքների ցանկի ճշգրտումը և դրա հետ կապված խնդիրները</div>
                         <div class="video-widget__text">
                             Մաքսային հայտարարագրերում չափազանց կարևոր է նշել ապրանքի ծագման երկիրը, քանի որ այն կարող է

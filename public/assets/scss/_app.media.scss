@@ -241,4 +241,10 @@
             margin-right: rem(8);
         }
     }
+
+    .team-item {
+        &__img {
+            border-radius: rem(16);
+        }
+    }
 }

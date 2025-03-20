@@ -157,6 +157,152 @@
     </div>
 </div>
 
+<div class="home-team">
+    <div class="row">
+        <div class="column sm-12">
+            <div class="team-slider">
+                <div class="team-slider__heading">
+                    <div class="team-slider__title">
+                        <h2 class="text-center h2-font">Մեր թիմը</h2>
+                    </div>
+                    <div class="team-slider__controls">
+                        <div class="team-slider__arrows slider-arrows">
+                            <div class="slider-arrow team-slider__arrow team-slider__arrow_prev">
+                                <i class="icon icon-arrow-left-round"></i>
+                            </div>
+                            <div class="slider-arrow team-slider__arrow team-slider__arrow_next">
+                                <i class="icon icon-arrow-right-round"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-slider__wrap">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-slider__slide swiper-slide">
+                                <div class="team-item">
+                                    <div class="team-item__img">
+                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
+                                    </div>
+                                    <div class="team-item__body">
+                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
+                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column sm-12 text-center">
+            <a href="{{ route('about') }}#team" class="btn btn_primary-border btn_space_lg btn_lg">
+                <span>Բոլոր թիմակիցները</span>
+                <i class="icon icon-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="home-contact">
     <div class="row">
         <div class="column sm-12">
@@ -213,6 +359,7 @@
         </div>
     </div>
 </div>
+
 @if($errors->any())
     <h4>{{$errors->first()}}</h4>
 @endif

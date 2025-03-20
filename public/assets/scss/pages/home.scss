@@ -225,6 +225,88 @@
     }
 }
 
+.home-team {
+    margin-bottom: rem(150);
+    overflow: hidden;
+}
+
+.team-slider {
+    position: relative;
+    
+    &__heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @extend %flex;
+        @extend %align-between;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &__title {
+        pointer-events: auto;
+    }
+
+    &__controls {
+        pointer-events: auto;
+        @extend %flex;
+    }
+
+    &__arrow {
+        // background-color: #F5F5F5;
+    }
+
+    &__wrap {
+        margin-left: auto;
+        margin-right: auto;
+        height: rem(528 + 72);
+        padding-top: rem(72);
+
+        .swiper {
+            overflow: visible;
+            height: 100%;
+            padding-bottom: rem(48);
+        }
+
+        .swiper-wrapper {
+            @extend %flex;
+        }
+    }
+
+    &__slide {
+        height: initial;
+        @extend %flex;
+        @extend %align-bottom;
+        width: rem(380 + 32);
+        @include transition(all,0.3s,ease);
+        padding: 0 rem(16);
+
+        .team-item {
+            @include transition(all,0.3s,ease);
+
+            &__name {
+                @include transition(all,0.3s,ease);
+            }
+        }
+
+        &:not(.swiper-slide-active) {
+            // width: rem(244 + 32);
+            // opacity: 0.5;
+
+            .team-item {
+                @include scale(0.95);
+                opacity: 0.5;
+                // margin-bottom: rem(40);
+
+                &__name {
+                    font-size: rem(20);
+                }
+            }
+        }
+    }
+}
+
 .home-contact {
     margin-bottom: rem(105);
     color: #fff;
