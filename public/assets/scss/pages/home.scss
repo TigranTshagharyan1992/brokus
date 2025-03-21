@@ -234,14 +234,11 @@
     position: relative;
     
     &__heading {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
         @extend %flex;
         @extend %align-between;
         pointer-events: none;
         z-index: 2;
+        margin-bottom: rem(24);
     }
 
     &__title {
@@ -254,14 +251,13 @@
     }
 
     &__arrow {
-        // background-color: #F5F5F5;
+        color: #F5F5F5;
     }
 
     &__wrap {
         margin-left: auto;
         margin-right: auto;
-        height: rem(528 + 72);
-        padding-top: rem(72);
+        height: rem(528);
 
         .swiper {
             overflow: visible;
@@ -283,6 +279,8 @@
         padding: 0 rem(16);
 
         .team-item {
+            width: 100%;
+            transform-origin: center bottom;
             @include transition(all,0.3s,ease);
 
             &__name {
@@ -291,13 +289,9 @@
         }
 
         &:not(.swiper-slide-active) {
-            // width: rem(244 + 32);
-            // opacity: 0.5;
-
             .team-item {
                 @include scale(0.95);
                 opacity: 0.5;
-                // margin-bottom: rem(40);
 
                 &__name {
                     font-size: rem(20);
@@ -532,6 +526,21 @@
         }
     }
 
+    .team-slider {
+        &__wrap {
+            height: rem(429);
+    
+            .swiper {
+                padding-bottom: rem(40);
+            }
+        }
+        
+        &__slide {
+            width: rem(300 + 24);
+            padding: 0 rem(12);
+        }
+    }
+
     .home-contact {
         &__body {
             padding: rem(40);
@@ -606,6 +615,29 @@
         &__desc {
             margin-bottom: rem(8);
             line-height: rem(16);
+        }
+    }
+
+    .home-team {
+        margin-bottom: rem(110);
+    }
+
+    .team-slider {
+        &__wrap {
+            height: rem(377);
+    
+            .swiper {
+                padding-bottom: rem(32);
+            }
+        }
+        
+        &__slide {
+            width: rem(240 + 24);
+            padding: 0 rem(4);
+        }
+
+        &__controls {
+            display: none;
         }
     }
 

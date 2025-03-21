@@ -108,8 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const teamSlider = new Swiper(".team-slider .swiper", {
             slidesPerView: "auto",
             loop: true,
-            // spaceBetween: 32,
-            // loopAdditionalSlides: 5,
             centeredSlides: true,
             navigation: {
                 nextEl: '.team-slider__arrow_next',
@@ -117,11 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             simulateTouch: false,
             pagination: false,
-            on: {
-                init: function (swiper) {
-                //   swiper.slideTo(4);
-                },
-            },
         });
     }
 
