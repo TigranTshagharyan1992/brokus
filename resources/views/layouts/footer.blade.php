@@ -74,59 +74,68 @@
                                 <img src="{{asset('assets/img/logo-white.svg')}}" alt="Brokus">
                             </a>
                         </div>
-                        <div class="footer__nav">
-                            <div class="footer__category font-18 font-lg-16 font-sm-14 font-bold">{{GetData::findWord($content, 12)}}</div>
-                            <div class="footer__links">
-                                <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 0)}}</a>
-                                <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 1)}}</a>
-                                <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 2)}}</a>
-                                <a href="{{ route('partners', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 3)}}</a>
-                                <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
-                            </div>
-                        </div>
-                        <div class="footer__contacts">
-                            <div class="footer__category font-18 font-lg-16 font-sm-14 font-bold">{{GetData::findWord($content, 13)}}</div>
-                            <div class="footer__about">
-                                <a href="tel: {{GetData::findWord($content, 14)}}" class="info-pair">
-                                    <div class="info-pair__icon">
-                                        <i class="icon icon-phone"></i>
-                                    </div>
-                                    <div class="info-pair__value font-sm-12">
-                                        {{GetData::findWord($content, 14)}}, {{GetData::findWord($content, 15)}}
-                                    </div>
-                                </a>
-                                <div class="info-pair">
-                                    <div class="info-pair__icon">
-                                        <i class="icon icon-message"></i>
-                                    </div>
-                                    <div class="info-pair__value font-sm-12">
-                                        {{GetData::findWord($content, 16)}}
-                                    </div>
-                                </div>
-                                <div class="info-pair">
-                                    <div class="info-pair__icon">
-                                        <i class="icon icon-pin"></i>
-                                    </div>
-                                    <div class="info-pair__value font-sm-12">
-                                        {{GetData::findWord($content, 17)}}
-                                    </div>
+                        <div class="footer__body">
+                            <div class="footer__nav">
+                                <div class="footer__category font-18 font-lg-16 font-sm-14 font-bold">{{GetData::findWord($content, 12)}}</div>
+                                <div class="footer__links">
+                                    <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 0)}}</a>
+                                    <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 1)}}</a>
+                                    <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 2)}}</a>
+                                    <a href="{{ route('partners', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 3)}}</a>
+                                    <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
                                 </div>
                             </div>
-                            <div class="footer__social">
-                                <a href="{{GetData::findWord($content, 18)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
-                                    <i class="icon icon-facebook"></i>
-                                </a>
-                                <a href="{{GetData::findWord($content, 19)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
-                                    <i class="icon icon-instagram"></i>
-                                </a>
-                                <a href="{{GetData::findWord($content, 20)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
-                                    <i class="icon icon-linkedin"></i>
-                                </a>
+                            <div class="footer__nav">
+                                <div class="footer__links">
+                                    <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Կապ</a>
+                                    <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Հաճախ տրվող հարցեր</a>
+                                    <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Գաղտնիության քաղաքականություն</a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts">
+                                <div class="footer__category font-18 font-lg-16 font-sm-14 font-bold">{{GetData::findWord($content, 13)}}</div>
+                                <div class="footer__about">
+                                    <a href="tel: {{GetData::findWord($content, 14)}}" class="info-pair">
+                                        <div class="info-pair__icon">
+                                            <i class="icon icon-phone"></i>
+                                        </div>
+                                        <div class="info-pair__value font-sm-12">
+                                            {{GetData::findWord($content, 14)}}, {{GetData::findWord($content, 15)}}
+                                        </div>
+                                    </a>
+                                    <div class="info-pair">
+                                        <div class="info-pair__icon">
+                                            <i class="icon icon-message"></i>
+                                        </div>
+                                        <div class="info-pair__value font-sm-12">
+                                            {{GetData::findWord($content, 16)}}
+                                        </div>
+                                    </div>
+                                    <div class="info-pair">
+                                        <div class="info-pair__icon">
+                                            <i class="icon icon-pin"></i>
+                                        </div>
+                                        <div class="info-pair__value font-sm-12">
+                                            {{GetData::findWord($content, 17)}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer__social">
+                                    <a href="{{GetData::findWord($content, 18)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                        <i class="icon icon-facebook"></i>
+                                    </a>
+                                    <a href="{{GetData::findWord($content, 19)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                        <i class="icon icon-instagram"></i>
+                                    </a>
+                                    <a href="{{GetData::findWord($content, 20)}}" class="btn btn_white-border btn_badge btn_sm" target="_blank">
+                                        <i class="icon icon-linkedin"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="footer__copyright">
-                        <span class="font-14 font-sm-12">©2024 Brokus.am All rights reserved</span>
+                        <span class="font-14 font-sm-12">©2025 Brokus.am All rights reserved</span>
                     </div>
                 </div>
             </div>
