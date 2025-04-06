@@ -39,6 +39,10 @@ $home = array(
     array("title"=>"Մանրամասն", "type"=>"text", "name"=>"edl_char_10"),
     array("title"=>"Մեզ վստահում են", "type"=>"text", "name"=>"edl_char_8"),
     array("title"=>"Բոլոր Գործընկերները", "type"=>"text", "name"=>"edl_char_9"),
+    array("title"=>"Մեր թիմը", "type"=>"text", "name"=>"edl_char_11"),
+    array("title"=>"Բոլոր թիմակիցները", "type"=>"text", "name"=>"edl_char_12"),
+    array("title"=>"ԱՆՎՃԱՐ ԽՈՐՀՐԴԱՏՎՈՒԹՅՈՒՆ", "type"=>"text", "name"=>"edl_char_13"),
+    array("title"=>"Գրեք մեզ ցանկացած հարցով, մեր մասնագետները սիրով կօգնեն ձեզ", "type"=>"text", "name"=>"edl_char_14"),
 );
 
 $service = array(
@@ -70,8 +74,10 @@ $about = array(
     array("title"=>"ԹԻՄԻ ԱՆԴԱՄՆԵՐ թիվ", "type"=>"text", "name"=>"ed_char_3"),
     array("title"=>"ԿԱՏԱՐՎԱԾ ԳՈՐԾԱՐՔ", "type"=>"text", "name"=>"edl_char_4"),
     array("title"=>"ԿԱՏԱՐՎԱԾ ԳՈՐԾԱՐՔ թիվ", "type"=>"text", "name"=>"ed_char_4"),
-    array("title"=>"Մեր թիմը", "type"=>"text", "name"=>"edl_char_5"),
-    array("title"=>"Մեր թիմը Text", "type"=>"textarea", "name"=>"edl_text_2","isRichText"=>false),
+    array("title"=>"Մեր աշխատանքը", "type"=>"text", "name"=>"edl_char_5"),
+    array("title"=>"Մի փոքր մեր առօրյայից", "type"=>"textarea", "name"=>"edl_text_2","isRichText"=>false),
+    array("title"=>"Մեր թիմը", "type"=>"text", "name"=>"edl_char_7"),
+    array("title"=>"Մեր թիմը Text", "type"=>"textarea", "name"=>"edl_text_3","isRichText"=>false),
 );
 
 $partners = array(
@@ -106,6 +112,58 @@ $message = array(
 $content = array(
     array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
 );
+$blog = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>false),
+);
+$blogInner = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Image", "type"=>"image", "name"=>"ed_image"),
+    array("title"=>"Date", "type"=>"date", "name"=>"ed_datetime_1"),
+    array("title"=>"Minute", "type"=>"text", "name"=>"ed_char_1"),
+
+);
+
+$faqPage = array(
+    array("title"=>"Title", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>false),
+);
+
+$faq = array(
+    array("title"=>"Question", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>false),
+);
+$privacyPolicy = array(
+    array("title"=>"Privacy Policy", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Text", "type"=>"textarea", "name"=>"edl_text_1","isRichText"=>true),
+);
+$member = array(
+    array("title"=>"Name", "type"=>"text", "name"=>"edl_title"),
+    array("title"=>"Image", "type"=>"image", "name"=>"ed_image"),
+    array("title"=>"Position", "type"=>"text", "name"=>"edl_char_1"),
+);
+
+$text = array(
+    array("title"=>"Տեքստ", "type"=>"textarea", "name"=>"edl_text_1", "isRichText"=>true),
+);
+$title = array(
+    array("title"=>"Տեքստ", "type"=>"text", "name"=>"edl_title"),
+);
+$imageRight = array(
+    array("title"=>"Տեքստ", "type"=>"textarea", "name"=>"edl_text_1", "isRichText"=>true),
+    array("title"=>"Image", "type"=>"image", "name"=>"ed_image"),
+);
+$imageLeft = array(
+    array("title"=>"Տեքստ", "type"=>"textarea", "name"=>"edl_text_1", "isRichText"=>true),
+    array("title"=>"Image", "type"=>"image", "name"=>"ed_image"),
+);
+$designText = array(
+    array("title"=>"Տեքստ", "type"=>"textarea", "name"=>"edl_text_1", "isRichText"=>false),
+);
+$video = array(
+    array("title"=>"youtube Նկար", "type"=>"image", "name"=>"ed_image"),
+    array("title"=>"youtube", "type"=>"textarea", "name"=>"ed_text_1", "isRichText"=>false),
+);
 
 
 
@@ -114,12 +172,27 @@ $content = array(
 $templates = array(
     array("id"=>"Home", "title"=>"Գլխավոր էջ", "fields"=>$home, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"About", "title"=>"Մեր մասին", "fields"=>$about, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Member", "title"=>"Մեր մասին", "fields"=>$member, "hasGallery"=>true, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Service", "title"=>"ԳՈՐԾԱՌՈՒՅԹՆԵՐԸ", "fields"=>$service, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"PricePolicy", "title"=>"Գնային Քաղաքականույթուն", "fields"=>$pricePolicy, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Partners", "title"=>"Գործընկերներ", "fields"=>$partners, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Partner", "title"=>"Գործընկեր", "fields"=>$partner, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Contact", "title"=>"Կապ", "fields"=>$contacts, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"FaqPage", "title"=>"Հարցեր", "fields"=>$faqPage, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Faq", "title"=>"Հարց", "fields"=>$faq, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"PrivacyPolicy", "title"=>"Գաղտնիության քաղաքականություն", "fields"=>$privacyPolicy, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Message", "title"=>"Հաղորդագրություն", "fields"=>$message, "hasGallery"=>false, "hasSeo"=>false, "hasWidget"=>true, "isWidget"=>false),
     array("id"=>"Content", "title"=>"Ինֆորմացիա", "fields"=>$content, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"Blog", "title"=>"Blog", "fields"=>$blog, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+    array("id"=>"BlogInner", "title"=>"BlogInner", "fields"=>$blogInner, "hasGallery"=>false, "hasSeo"=>true, "hasWidget"=>true, "isWidget"=>false),
+
+
+    //-------------------------------Widget templates here--------------------------------//
+    array("id"=>"Text", "title"=>"Տեքստ", "fields"=>$text, "hasGallery"=>false, "hasSeo"=>false, "isWidget"=>true),
+    array("id"=>"Title", "title"=>"Վերնագիր", "fields"=>$title, "hasGallery"=>false, "hasSeo"=>false, "isWidget"=>true),
+    array("id"=>"DesignText", "title"=>"Դիզայն Տեքստ", "fields"=>$designText, "hasGallery"=>false, "hasSeo"=>false, "isWidget"=>true),
+    array("id"=>"Video", "title"=>"Video", "fields"=>$video, "hasGallery"=>true, "hasSeo"=>false, "isWidget"=>true),
+    array("id"=>"ImageRight", "title"=>"ImageRight", "fields"=>$imageRight, "hasGallery"=>true, "hasSeo"=>false, "isWidget"=>true),
+    array("id"=>"ImageLeft", "title"=>"ImageLeft", "fields"=>$imageLeft, "hasGallery"=>true, "hasSeo"=>false, "isWidget"=>true),
 );
 ?>

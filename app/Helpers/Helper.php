@@ -17,6 +17,72 @@ class Helper
 
         return ['products' =>$products, 'productCount' => $productCount];
     }
+
+    public static function dottyDate($str)
+    {
+        if( !empty($str) )
+        {
+            $str = substr($str, 0, 10);
+
+            $chunks = explode("-", $str);
+            if(count($chunks) === 1)
+            {
+                $chunks = explode('/', $str);
+            }
+
+            $chunks = array_reverse($chunks);
+
+            return implode(".", $chunks);
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+    public static function getShortMonthString($number)
+    {
+        $voc = [
+            "hy" => ["Հնվ", "Փտվ", "Մար", "Ապր", "Մայ", "Հուն", "Հուլ", "Օգս", "Սեպ", "Հոկ", "Նոյ", "Դեկ"],
+            "en" => ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "ru" => ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+            "fr" => ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Août", "Sep", "Oct", "Nov", "Déc"],
+        ];
+
+        if(isset($voc[app()->getLocale()])) {
+            return $voc[app()->getLocale()][$number - 1];
+        } else {
+            return $voc['en'][$number - 1];
+        }
+    }
+    public static function getMonthString($number)
+    {
+        $voc = [
+            "hy" => ["Հունվար", "Փետրվար", "Մարտ", "Ապրիլ", "Մայիս", "Հունիս", "Հուլիս", "Օգոստոս", "Սեպտեմբեր", "Հոկտեմբեր", "Նոյեմբեր", "Դեկտեմբեր"],
+            "en" => ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "ru" => ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            "fr" => ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+        ];
+
+        if(isset($voc[app()->getLocale()])) {
+            return $voc[app()->getLocale()][$number - 1];
+        } else {
+            return $voc['en'][$number - 1];
+        }
+    }
+    public static function prettyDate($str, $format=0)
+    {
+        $chunks = explode("-", substr($str, 0, 10));
+
+        if($format === 1) {
+            $month = self::getShortMonthString($chunks[1]);
+        } else {
+            $month = self::getMonthString($chunks[1]);
+        }
+
+        return $chunks[2]." ".$month.", ".$chunks[0];
+    }
+
     public static function getUnit($product)
     {
         $unit = false;

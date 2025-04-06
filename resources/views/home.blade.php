@@ -163,7 +163,7 @@
             <div class="team-slider">
                 <div class="team-slider__heading">
                     <div class="team-slider__title">
-                        <h2 class="text-center h2-font">Մեր թիմը</h2>
+                        <h2 class="text-center h2-font">{{$data->entityDataLang->edl_char_11}}</h2>
                     </div>
                     <div class="team-slider__controls">
                         <div class="team-slider__arrows slider-arrows">
@@ -179,116 +179,19 @@
                 <div class="team-slider__wrap">
                     <div class="swiper">
                         <div class="swiper-wrapper">
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
+                            @foreach($members as $member)
+                                <div class="team-slider__slide swiper-slide">
+                                    <div class="team-item">
+                                        <div class="team-item__img">
+                                            <img width="380" height="416" src="{{asset(\Helper::image($member->entityData->ed_image))}}" alt="team">
+                                        </div>
+                                        <div class="team-item__body">
+                                            <div class="team-item__position">{{$member->entityDataLang->edl_title}}</div>
+                                            <div class="team-item__name">{{$member->entityDataLang->edl_char_1}}</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-slider__slide swiper-slide">
-                                <div class="team-item">
-                                    <div class="team-item__img">
-                                        <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                                    </div>
-                                    <div class="team-item__body">
-                                        <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                        <div class="team-item__name">Հովհաննես Արամյան</div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -296,7 +199,7 @@
         </div>
         <div class="column sm-12 text-center">
             <a href="{{ route('about') }}#team" class="btn btn_primary-border btn_space_lg btn_lg">
-                <span>Բոլոր թիմակիցները</span>
+                <span>{{$data->entityDataLang->edl_char_12}}</span>
                 <i class="icon icon-arrow-right"></i>
             </a>
         </div>
@@ -315,8 +218,8 @@
                     </div>
                     <div class="column sm-12 lg-7 lg-order-1">
                         <div class="home-contact__body">
-                            <div class="home-contact__title">ԱՆՎՃԱՐ ԽՈՐՀՐԴԱՏՎՈՒԹՅՈՒՆ</div>
-                            <div class="home-contact__desc font-20 font-lg-18 font-sm-14">Գրեք մեզ ցանկացած հարցով, մեր մասնագետները սիրով կօգնեն ձեզ</div>
+                            <div class="home-contact__title">{{$data->entityDataLang->edl_char_13}}</div>
+                            <div class="home-contact__desc font-20 font-lg-18 font-sm-14">{{$data->entityDataLang->edl_char_14}}</div>
                             <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="btn btn_lg btn_space_lg btn_primary">
                                 <span class="font-sm-14">ուղարկել հաղորդագրություն</span>
                                 <i class="icon icon-arrow-right"></i>

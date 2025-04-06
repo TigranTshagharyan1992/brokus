@@ -82,14 +82,13 @@
                                     <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 1)}}</a>
                                     <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 2)}}</a>
                                     <a href="{{ route('partners', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 3)}}</a>
-                                    <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
                                 </div>
                             </div>
                             <div class="footer__nav">
                                 <div class="footer__links">
-                                    <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Կապ</a>
-                                    <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Հաճախ տրվող հարցեր</a>
-                                    <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">Գաղտնիության քաղաքականություն</a>
+                                    <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 4)}}</a>
+                                    <a href="{{ route('faq', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 37)}}</a>
+                                    <a href="{{ route('privacyPolicy', ['lang' => app()->getLocale()]) }}" class="footer__link font-lg-14 font-sm-12">{{GetData::findWord($content, 38)}}</a>
                                 </div>
                             </div>
                             <div class="footer__contacts">

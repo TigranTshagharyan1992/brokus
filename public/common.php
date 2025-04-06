@@ -8,5 +8,11 @@ const PARTNERS = 6;
 
 const CONTACT = 37;
 
+const FAQ = 280;
+
+const PRIVACY_POLICY = 283;
+
+const BLOG = 290;
+
 
 

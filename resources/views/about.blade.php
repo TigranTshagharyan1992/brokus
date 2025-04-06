@@ -92,101 +92,26 @@
     <div class="row">
         <div class="column sm-12">
             <div class="team__heading">
-                <h2 class="team__title h2-font text-center">Մեր թիմը</h2>
+                <h2 class="team__title h2-font text-center">{{$data->entityDataLang->edl_char_7}}</h2>
                 <div class="team__desc font-20 font-lg-16 font-sm-14 text-center">
-                    Մեր կազմակերպությունն ունի 30-ից ավել բարձր որակավորում ունեցող մասնագետներ
+                    {{$data->entityDataLang->edl_text_3}}
                 </div>
             </div>
             <div class="team__list">
                 <div class="row">
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
+                    @foreach($members as $member)
+                        <div class="column sm-12 md-6 lg-4 xl-3">
+                            <div class="team-item">
+                                <div class="team-item__img">
+                                    <img width="380" height="416" src="{{asset(\Helper::image($member->entityData->ed_image))}}" alt="team">
+                                </div>
+                                <div class="team-item__body">
+                                    <div class="team-item__position">{{$member->entityDataLang->edl_title}}</div>
+                                    <div class="team-item__name">{{$member->entityDataLang->edl_char_1}}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column sm-12 md-6 lg-4 xl-3">
-                        <div class="team-item">
-                            <div class="team-item__img">
-                                <img width="380" height="416" src="{{asset('assets/img/content/team-item.jpg')}}" alt="team">
-                            </div>
-                            <div class="team-item__body">
-                                <div class="team-item__position">ԱՎԱԳ ՄԱՍՆԱԳԵՏ</div>
-                                <div class="team-item__name">Հովհաննես Արամյան</div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

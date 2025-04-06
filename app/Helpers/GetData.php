@@ -67,7 +67,7 @@ class GetData
         if ($with) {
             $records->with($with);
         } else {
-            $records->with('entityData', 'entityDataLang');
+            $records->with('entityData', 'entityDataLang','entitySEO');
         }
         if($limit){
             $data = $records->paginate($limit);

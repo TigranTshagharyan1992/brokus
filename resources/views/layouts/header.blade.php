@@ -37,6 +37,9 @@
                                 <div class="header-menu__link {{$currentRouteName == 'contacts' ? 'active':''}}">
                                     <a href="{{ route('contacts', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 4)}}</a>
                                 </div>
+                                <div class="header-menu__link {{$currentRouteName == 'blog' ? 'active':''}}">
+                                    <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}">{{GetData::findWord($content, 36)}}</a>
+                                </div>
                             </nav>
                             <div class="header-menu__footer">
                                 <div class="header-menu__about">

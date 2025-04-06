@@ -1,3 +1,6 @@
+@inject('app', 'Illuminate\Contracts\Foundation\Application')
+@inject('urlGenerator', 'Illuminate\Routing\UrlGenerator')
+
 <div class="lang-switcher toggler">
     @foreach($available_locales as $locale_name => $available_locale)
         @if($available_locale === $current_locale)
@@ -16,7 +19,7 @@
                     @if($available_locale !== $current_locale)
                         @php($img = 'assets/img/'.$available_locale.'.svg')
                         <div class="lang-switcher__item">
-                            <a href="{{route($currentRouteName, ['lang' => $available_locale])}}">
+                            <a href="{{ $urlGenerator->toLanguage($available_locale) }}">
                                 <img width="20" height="20" src="{{asset($img)}}" alt="{{ $available_locale }}">
                                 <span>{{ $available_locale }}</span>
                             </a>

@@ -22,7 +22,7 @@ Route::group(['middleware'=> ['locale'], 'prefix'=>'{lang?}'], function() {
     Route::get('/about', Controllers\AboutController::class)->name('about');
     Route::get('/partners', Controllers\PartnersController::class)->name('partners');
     Route::get('/blog', Controllers\BlogController::class)->name('blog');
-    Route::get('/blog-inner', Controllers\BlogInnerController::class)->name('blogInner');
+    Route::get('/blog-inner/{id}', [Controllers\BlogController::class, 'blogInner'])->name('blogInner');
     Route::get('/faq', Controllers\FaqController::class)->name('faq');
     Route::get('/privacy-policy', Controllers\PrivacyPolicyController::class)->name('privacyPolicy');
     Route::post('/send-mail', Controllers\ContactController::class)->name('contact');

@@ -15,7 +15,7 @@
         CONTACT => "entity_id DESC",
 	);
 
-	$disableAddButtonIn = array(0);
+	$disableAddButtonIn = array();
 
 	$disableImagesIn = array();
 
@@ -67,14 +67,18 @@
             "Հասցե",
             "ՇՆՈՐՀԱԿԱԼՈՒԹՅՈՒՆ!",
             "Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է",
+            "Blog",
+            "Հաճախ տրվող հարցեր",
+            "Գաղտնիության քաղաքականություն"
         )
     );
 
 	$templateMap = array(
-		0 => array("Content", "Home", "About", "Service","PricePolicy","Partners","Contact")
+		0 => array("Content", "Home", "About", "Service", "Blog",
+            "PricePolicy","Partners","Contact","FaqPage","PrivacyPolicy")
 	);
 
-	$widgetWhiteList = array("");
+	$widgetWhiteList = array("Blog");
 
 	$additionalColumnsInSections = array(
 		0=>array("entity_removable"=>"Removable"),
@@ -85,13 +89,14 @@
 	$templateChildren = array(
         "Partners" => ["Partner"],
         "Contact" => ["Message"],
+        "FaqPage" => ["Faq"],
         "Content" => [],
         "Home" => [],
-        "About" => [],
+        "About" => ["Member"],
         "Service" => [],
         "PricePolicy" => [],
-
-
+        "Blog" => ['BlogInner'],
+        "BlogInner" => ['Text','DesignText','Video','ImageRight','ImageLeft','Title'],
 	);
 
 	$templateAdditionalColumns = array(
