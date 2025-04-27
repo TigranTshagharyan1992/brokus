@@ -72,6 +72,9 @@ class Helper
     }
     public static function prettyDate($str, $format=0)
     {
+        if(!$str){
+            return '';
+        }
         $chunks = explode("-", substr($str, 0, 10));
 
         if($format === 1) {

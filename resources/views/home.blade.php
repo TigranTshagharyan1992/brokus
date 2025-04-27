@@ -107,7 +107,7 @@
             <h2 class="text-center h2-font title-space_lg">{{$data->entityDataLang->edl_char_5}}</h2>
         </div>
         <div class="column sm-12 lg-6">
-            <a href="{{ route('services') }}" class="activity-block">
+            <a href="{{ route('services', ['lang' => app()->getLocale()]) }}" class="activity-block">
                 <div class="activity-block__img">
                     <img width="792" height="360" src="{{\App\Helpers\Helper::image($data->entityData->ed_char_5)}}" alt="Activity">
                 </div>
@@ -131,7 +131,7 @@
             </a>
         </div>
         <div class="column sm-12 lg-6">
-            <a href="{{ route('pricePolicy') }}" class="activity-block">
+            <a href="{{ route('pricePolicy', ['lang' => app()->getLocale()]) }}" class="activity-block">
                 <div class="activity-block__img">
                     <img width="792" height="360" src="{{\App\Helpers\Helper::image($data->entityData->ed_char_6)}}" alt="Prices">
                 </div>

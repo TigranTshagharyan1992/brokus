@@ -22,9 +22,10 @@ class BlogController extends Controller
 
     public function blogInner($lang, $id)
     {
+
       $data = GetData::getElement($id);
 
-      $widgets = GetData::getData(['entity_parent' => $id], ['entity_order' => 'DESC']);
+      $widgets = GetData::getData(['entity_parent' => $data['entity_id']], ['entity_order' => 'DESC']);
 
         $blogs = Entity::where('entity_parent', BLOG)
             ->where('entity_id', '!=', $id)
