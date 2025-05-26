@@ -59,15 +59,16 @@
             <div class="contact__map main-map">
                 <div class="main-map__title font-20 font-lg-18 font-sm-16 font-medium">{{GetData::findWord($content, 17)}}</div>
                 <div class="main-map__wrap">
-                    <iframe
+                    {{-- <iframe
                         width="728"
                         height="464"
                         style="border:0"
                         loading="lazy"
                         allowfullscreen
                         referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.381863057!2d44.48701815350622!3d40.16981403234471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd58c5e0a63f%3A0x29cfc2a876b8d14e!2sPROF%20CUSTOMS%20SERVICE!5e0!3m2!1sru!2sam!4v1688729931529!5m2!1sru!2sam">
-                    </iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.381863057!2d44.48701815350622!3d40.16981403234471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd58c5e0a63f%3A0x29cfc2a876b8d14e!2sBrokus!5e0!3m2!1sru!2sam!4v1688729931529!5m2!1sru!2sam">
+                    </iframe> --}}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.763594129998!2d44.485301976418256!3d40.169816970629675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc4c72f13793%3A0x165522ab53cfd8b7!2s10%20Admiral%20Isakov%20Ave%2C%20Yerevan%200082!5e0!3m2!1sru!2sam!4v1748242675430!5m2!1sru!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
